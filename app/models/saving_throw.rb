@@ -1,0 +1,2 @@
+class SavingThrow < ApplicationRecord
+end

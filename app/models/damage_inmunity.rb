@@ -1,0 +1,2 @@
+class DamageInmunity < ApplicationRecord
+end

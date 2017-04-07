@@ -1,0 +1,2 @@
+class Sense < ApplicationRecord
+end

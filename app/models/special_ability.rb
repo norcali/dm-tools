@@ -1,0 +1,2 @@
+class SpecialAbility < ApplicationRecord
+end
