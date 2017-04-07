@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170407201740) do
+ActiveRecord::Schema.define(version: 20170407204851) do
 
   create_table "abilities", force: :cascade do |t|
     t.integer "strength"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20170407201740) do
     t.integer "intelligence"
     t.integer "wisdom"
     t.integer "charisma"
+    t.integer "monster_id"
+    t.index ["monster_id"], name: "index_abilities_on_monster_id"
   end
 
   create_table "actions", force: :cascade do |t|
@@ -71,6 +73,7 @@ ActiveRecord::Schema.define(version: 20170407201740) do
     t.integer "intelligence_save"
     t.integer "wisdom_save"
     t.integer "charisma_save"
+    t.        "monster"
   end
 
   create_table "senses", force: :cascade do |t|
@@ -96,6 +99,7 @@ ActiveRecord::Schema.define(version: 20170407201740) do
     t.integer "stealth"
     t.integer "slight_of_hand"
     t.integer "survival"
+    t.        "monster"
   end
 
   create_table "special_abilities", force: :cascade do |t|
