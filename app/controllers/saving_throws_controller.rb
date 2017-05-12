@@ -1,0 +1,2 @@
+class SavingThrowsController < ApplicationController
+end

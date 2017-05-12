@@ -1,0 +1,2 @@
+class DamageVulnerabilitiesController < ApplicationController
+end
