@@ -20,7 +20,7 @@ class CreateSkills < ActiveRecord::Migration[5.0]
       t.integer :stealth
       t.integer :slight_of_hand
       t.integer :survival
-      t.references :character,  foreign_key: true
+      t.integer :initiative
     end
   end
 end

@@ -1,0 +1,2 @@
+class ConditionResistance < Feature
+end

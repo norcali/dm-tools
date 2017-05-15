@@ -1,0 +1,2 @@
+class Bard < Klass
+end

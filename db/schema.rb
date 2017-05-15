@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512195347) do
+ActiveRecord::Schema.define(version: 20170515161111) do
 
   create_table "abilities", force: :cascade do |t|
     t.integer "strength"
@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 20170512195347) do
     t.integer "intelligence"
     t.integer "wisdom"
     t.integer "charisma"
-    t.integer "character_id"
-    t.index ["character_id"], name: "index_abilities_on_character_id"
   end
 
   create_table "actions", force: :cascade do |t|
@@ -33,11 +31,18 @@ ActiveRecord::Schema.define(version: 20170512195347) do
     t.index ["character_id"], name: "index_actions_on_character_id"
   end
 
+  create_table "backgrounds", force: :cascade do |t|
+    t.string "name"
+    t.string "skill_proficiency_1"
+    t.string "skill_proficiency_2"
+  end
+
   create_table "character_classes", force: :cascade do |t|
-    t.string  "name"
     t.integer "level"
+    t.integer "klass_id"
     t.integer "character_id"
     t.index ["character_id"], name: "index_character_classes_on_character_id"
+    t.index ["klass_id"], name: "index_character_classes_on_klass_id"
   end
 
   create_table "characters", force: :cascade do |t|
@@ -48,42 +53,32 @@ ActiveRecord::Schema.define(version: 20170512195347) do
     t.string  "speed"
     t.integer "armor_class"
     t.integer "hit_points"
-  end
-
-  create_table "condition_inmunities", force: :cascade do |t|
-    t.string  "type"
-    t.integer "character_id"
     t.integer "race_id"
-    t.index ["character_id"], name: "index_condition_inmunities_on_character_id"
-    t.index ["race_id"], name: "index_condition_inmunities_on_race_id"
+    t.integer "sense_id"
+    t.integer "background_id"
+    t.integer "skill_id"
+    t.integer "saving_throw_id"
+    t.integer "ability_id"
+    t.index ["ability_id"], name: "index_characters_on_ability_id"
+    t.index ["background_id"], name: "index_characters_on_background_id"
+    t.index ["race_id"], name: "index_characters_on_race_id"
+    t.index ["saving_throw_id"], name: "index_characters_on_saving_throw_id"
+    t.index ["sense_id"], name: "index_characters_on_sense_id"
+    t.index ["skill_id"], name: "index_characters_on_skill_id"
   end
 
-  create_table "condition_resistances", force: :cascade do |t|
-    t.string  "type"
+  create_table "characters_features", id: false, force: :cascade do |t|
     t.integer "character_id"
-    t.integer "race_id"
-    t.index ["character_id"], name: "index_condition_resistances_on_character_id"
-    t.index ["race_id"], name: "index_condition_resistances_on_race_id"
+    t.integer "feature_id"
+    t.index ["character_id"], name: "index_characters_features_on_character_id"
+    t.index ["feature_id"], name: "index_characters_features_on_feature_id"
   end
 
-  create_table "damage_inmunities", force: :cascade do |t|
-    t.string  "type"
+  create_table "characters_languages", id: false, force: :cascade do |t|
+    t.integer "language_id"
     t.integer "character_id"
-    t.index ["character_id"], name: "index_damage_inmunities_on_character_id"
-  end
-
-  create_table "damage_resistances", force: :cascade do |t|
-    t.string  "type"
-    t.integer "character_id"
-    t.integer "race_id"
-    t.index ["character_id"], name: "index_damage_resistances_on_character_id"
-    t.index ["race_id"], name: "index_damage_resistances_on_race_id"
-  end
-
-  create_table "damage_vulnerabilities", force: :cascade do |t|
-    t.string  "type"
-    t.integer "character_id"
-    t.index ["character_id"], name: "index_damage_vulnerabilities_on_character_id"
+    t.index ["character_id"], name: "index_characters_languages_on_character_id"
+    t.index ["language_id"], name: "index_characters_languages_on_language_id"
   end
 
   create_table "environments", force: :cascade do |t|
@@ -92,21 +87,44 @@ ActiveRecord::Schema.define(version: 20170512195347) do
     t.index ["character_id"], name: "index_environments_on_character_id"
   end
 
-  create_table "languages", force: :cascade do |t|
-    t.string  "name"
-    t.integer "character_id"
+  create_table "features", force: :cascade do |t|
+    t.string "type"
+    t.string "name"
+  end
+
+  create_table "features_races", id: false, force: :cascade do |t|
     t.integer "race_id"
-    t.index ["character_id"], name: "index_languages_on_character_id"
-    t.index ["race_id"], name: "index_languages_on_race_id"
+    t.integer "feature_id"
+    t.index ["feature_id"], name: "index_features_races_on_feature_id"
+    t.index ["race_id"], name: "index_features_races_on_race_id"
+  end
+
+  create_table "klasses", force: :cascade do |t|
+    t.string  "type"
+    t.string  "specialization"
+    t.integer "hit_die"
+    t.string  "saving_throw_proficiency_1"
+    t.string  "saving_throw_proficiency_2"
+  end
+
+  create_table "languages", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "languages_races", id: false, force: :cascade do |t|
+    t.integer "race_id"
+    t.integer "language_id"
+    t.index ["language_id"], name: "index_languages_races_on_language_id"
+    t.index ["race_id"], name: "index_languages_races_on_race_id"
   end
 
   create_table "races", force: :cascade do |t|
     t.string  "name"
     t.string  "size"
-    t.string  "type"
+    t.string  "race_type"
     t.string  "subtype"
-    t.integer "character_id"
-    t.index ["character_id"], name: "index_races_on_character_id"
+    t.integer "sense_id"
+    t.index ["sense_id"], name: "index_races_on_sense_id"
   end
 
   create_table "saving_throws", force: :cascade do |t|
@@ -116,14 +134,10 @@ ActiveRecord::Schema.define(version: 20170512195347) do
     t.integer "intelligence"
     t.integer "wisdom"
     t.integer "charisma"
-    t.integer "character_id"
-    t.index ["character_id"], name: "index_saving_throws_on_character_id"
   end
 
   create_table "senses", force: :cascade do |t|
-    t.string  "type"
-    t.integer "race_id"
-    t.index ["race_id"], name: "index_senses_on_race_id"
+    t.string "name"
   end
 
   create_table "skills", force: :cascade do |t|
@@ -145,8 +159,7 @@ ActiveRecord::Schema.define(version: 20170512195347) do
     t.integer "stealth"
     t.integer "slight_of_hand"
     t.integer "survival"
-    t.integer "character_id"
-    t.index ["character_id"], name: "index_skills_on_character_id"
+    t.integer "initiative"
   end
 
 end

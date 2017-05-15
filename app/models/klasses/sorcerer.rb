@@ -1,0 +1,2 @@
+class Sorcerer < Klass
+end

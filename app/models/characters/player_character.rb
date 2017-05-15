@@ -1,6 +1,4 @@
 class PlayerCharacter < Character
-	has_many :character_classes
-
 	def multiclassed?
 		character_classes.count > 1
 	end
@@ -11,5 +9,12 @@ class PlayerCharacter < Character
 
 	def is_caster?
 		character_classes.any?{|c| c.is_caster? }
+	end
+
+	def is_half_caster?
+	end
+
+	def title
+		"#{name} #{character_classes.each{|f| f.display_name}}"
 	end
 end

@@ -1,0 +1,2 @@
+class Warlock < Klass
+end

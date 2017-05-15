@@ -1,0 +1,2 @@
+class Barbarian < Klass
+end

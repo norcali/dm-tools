@@ -1,5 +1,5 @@
 class Ability < ApplicationRecord
-	belongs_to :character
+	has_one :character
 
 
 	def strength_bonus

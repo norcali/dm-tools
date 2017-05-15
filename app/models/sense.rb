@@ -1,3 +1,4 @@
 class Sense < ApplicationRecord
-	belongs_to :character
+	has_many :characters
+	has_many :races
 end

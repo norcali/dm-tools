@@ -1,0 +1,2 @@
+class Druid < Klass
+end

@@ -1,0 +1,2 @@
+class BackgroundsClassesController < ApplicationController
+end

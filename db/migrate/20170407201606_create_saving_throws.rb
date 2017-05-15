@@ -7,7 +7,6 @@ class CreateSavingThrows < ActiveRecord::Migration[5.0]
       t.integer :intelligence
       t.integer :wisdom
       t.integer :charisma
-      t.references :character, foreign_key: true
     end
   end
 end

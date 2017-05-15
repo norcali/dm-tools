@@ -1,5 +1,5 @@
 class SavingThrow < ApplicationRecord
-	belongs_to :character
+	has_one :character
 
 	def has_proficiency?(saving_throw)
 	end

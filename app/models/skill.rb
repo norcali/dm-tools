@@ -1,5 +1,5 @@
 class Skill < ApplicationRecord
-	belongs_to :character
+	has_one :character
 
 	def has_proficiency?
 	end
