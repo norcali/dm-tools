@@ -3,5 +3,4 @@ class SavingThrow < ApplicationRecord
 
 	def has_proficiency?(saving_throw)
 	end
-
 end
