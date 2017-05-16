@@ -1,5 +1,8 @@
-class Ability < ApplicationRecord
+class CharacterStat < ApplicationRecord
 	has_one :character
+	has_many :ability_scores
+	belongs_to :saving_throw
+	belongs_to :skill
 
 
 	def strength_bonus

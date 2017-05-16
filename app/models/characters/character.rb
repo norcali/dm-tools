@@ -1,5 +1,5 @@
 class Character < ApplicationRecord
-	belongs_to :ability
+	belongs_to :character_stat
 	belongs_to :saving_throw
 	belongs_to :skill
 	belongs_to :race

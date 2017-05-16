@@ -1,5 +1,5 @@
 class Skill < ApplicationRecord
-	has_one :character
+	has_one :character_stat
 
 	def has_proficiency?(skill)
 	end

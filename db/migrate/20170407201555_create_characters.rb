@@ -11,9 +11,7 @@ class CreateCharacters < ActiveRecord::Migration[5.0]
       t.references :race
       t.references :sense
       t.references :background
-      t.references :skill
-      t.references :saving_throw
-      t.references :ability
+      t.references :character_stat
     end
   end
 end
