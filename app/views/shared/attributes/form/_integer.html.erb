@@ -1,0 +1,7 @@
+<% partial = 'id' if field.include?('id') %>
+<% partial ||= 'number_field' %>
+
+<%= render partial: "shared/attributes/form/integer/#{partial}", locals: { object: object, field: field, form: form } %>
+
+
+

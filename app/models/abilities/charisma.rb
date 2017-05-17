@@ -1,0 +1,2 @@
+class Charisma < Ability
+end

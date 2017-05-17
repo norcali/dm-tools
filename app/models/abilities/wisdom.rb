@@ -1,0 +1,2 @@
+class Wisdom < Ability
+end

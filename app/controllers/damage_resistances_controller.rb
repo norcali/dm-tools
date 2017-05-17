@@ -1,0 +1,2 @@
+class DamageResistancesController < ApplicationController
+end

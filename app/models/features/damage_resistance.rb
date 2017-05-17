@@ -1,0 +1,2 @@
+class DamageResistance < Feature
+end

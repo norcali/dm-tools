@@ -1,0 +1,2 @@
+class ConditionResistancesController < ApplicationController
+end

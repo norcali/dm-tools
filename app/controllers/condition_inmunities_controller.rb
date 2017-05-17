@@ -1,0 +1,2 @@
+class ConditionInmunitiesController < ApplicationController
+end

@@ -1,0 +1,12 @@
+<div class="form-group">
+	<% if field.include?('login') %>
+		<% partial = 'login' %>
+	<% elsif field.include?('attachment') %>
+		<% partial = 'file' %>
+	<% else %>
+		<% partial = 'text_field' %>
+	<% end %>
+	<%= render partial: "shared/attributes/form/string/#{partial}", locals: { object: object, field: field, form: form } %>
+</div>
+
+

@@ -1,0 +1,10 @@
+<tr>
+	<% object.attributes.reject{|f| f == 'id'}.each do |attribute| %>
+		<%= index_attribute_renderer(attribute, object) %>
+	<% end %>
+	<td>
+		<%= link_to send("edit_#{name}_path", object) do %>
+			<i class="fa fa-pencil" aria-hidden="true"></i>
+		<% end %>
+	</td>
+</tr>

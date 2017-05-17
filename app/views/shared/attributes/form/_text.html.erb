@@ -1,0 +1,13 @@
+<% content_for :foot_js do %>
+	<% froala_id = object.class.name.underscore + '_' + field.underscore %>
+	<script type="text/javascript">
+		$("#<%= froala_id %>").froalaEditor({
+			height: 200,
+		})
+	</script>
+<% end %>
+<div class="form-group">
+	<%= form.label field , t("activerecord.attributes.#{controller_path.classify.underscore}.#{field}") %>
+	<%= form.text_area field, class: 'form-control', rows: 3 %>
+</div>
+

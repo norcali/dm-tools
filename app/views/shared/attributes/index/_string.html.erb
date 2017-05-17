@@ -1,0 +1,5 @@
+<% if object.send(item.first).try(:file).nil? %>
+	<td><%= item.last.try(:html_safe) %></td>
+<% else %>
+	<%= render partial: "shared/attributes/index/file", locals: {object: object, item: item} %>
+<% end %>

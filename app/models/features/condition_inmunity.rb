@@ -1,0 +1,2 @@
+class ConditionInmunity < Feature
+end

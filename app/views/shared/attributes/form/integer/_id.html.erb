@@ -1,0 +1,15 @@
+<% content_for :foot_js do %>
+	<% select_id = object.class.name.underscore + '_' + field.underscore %>
+	<script type="text/javascript">
+		$("#<%= select_id %>").select2({
+			theme: 'bootstrap',
+			dropdownAutoWidth : true,
+			width: 'auto'
+		});
+	</script>
+<% end %>
+<% klass = field.gsub('_id','').camelize.constantize %>
+<div class="form-group">
+	<%= form.label field, t("activerecord.attributes.#{controller_path.classify.underscore}.#{field}") %>
+	<%= form.select field, klass.all.map{ |s| [s.display, s.id] } , {include_blank: true}, class: 'form-control' %>
+</div>

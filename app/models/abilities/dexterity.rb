@@ -1,0 +1,2 @@
+class Dexterity < Ability
+end

@@ -1,0 +1,34 @@
+<h3><%= t("activerecord.models.#{path.classify.underscore}.other") %></h3>
+<hr/>
+
+<table class="table table-striped table-condensed">
+  <thead>
+    <tr>
+      <% path.classify.constantize.attribute_names[1..-1].each do |attribute| %>
+        <th><%= path.classify.constantize.human_attribute_name attribute %></th>
+      <% end %>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if objects.empty? %>
+      <tr>
+        <td colspan="100%" class="text-center"><%=t('tables.no_records')%></td>
+      </tr>
+    <% else %>
+      <% objects.each do |object| %>
+        <%= render partial: 'shared/index_table', locals: { object: object } %>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<div class="col-xs-9 no-spaces">
+  <%= link_to t('helpers.submit.new'), send("new_#{path.classify.underscore}_path"), class: 'btn btn-default' unless is_nested_model?(path.classify.underscore) %>
+</div>
+
+<div class='col-xs-3 align-paginate'>
+  <%= pagination_links(objects) %>
+</div>
+
+

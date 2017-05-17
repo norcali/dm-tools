@@ -1,0 +1,2 @@
+class Strength < Ability
+end

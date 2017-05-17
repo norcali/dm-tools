@@ -1,0 +1,2 @@
+class Monk < Klass
+end

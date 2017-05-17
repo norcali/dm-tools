@@ -1,0 +1,17 @@
+<tr>
+  <% object.attributes.except('id').each do |item| %>
+    <%= index_attribute_renderer(item, object) %>
+  <% end %>
+  <td class='align-right'>
+    <% if model_has_show?(object.class.to_s.underscore) %>
+      <%= link_to send("#{object.class.to_s.underscore}_path", object) do %>
+        <i class="fa fa-eye distance" aria-hidden="true"></i>
+      <% end %>
+    <% end %>
+    <% if current_user.can?("manage_#{object.class.name.pluralize.underscore}") %>
+      <%= link_to send("edit_#{object.class.to_s.underscore}_path", object) do %>
+        <i class="fa fa-pencil distance" aria-hidden="true"></i>
+      <% end %>
+    <% end %>
+  </td>
+</tr>

@@ -1,0 +1,23 @@
+<% content_for :foot_js do %>
+	<script type="text/javascript">
+		$(function () {
+			$('#datetimepicker_<%= field %>').datetimepicker({
+				useCurrent: false,
+				locale: 'es',
+				daysOfWeekDisabled: [0, 6],
+				minDate: new Date(),
+				format: 'DD/MM/YYYY - HH:mm'
+			});
+		});
+	</script>
+<% end %>
+
+<div class="form-group">
+	<%= form.label field , t("activerecord.attributes.#{controller_path.classify.underscore}.#{field}") %>
+	<div class='input-group date' id="datetimepicker_<%= field %>" >
+		<%= form.text_field field, class: 'form-control' %>
+		<span class="input-group-addon">
+			<span class="glyphicon glyphicon-calendar"></span>
+		</span>
+	</div>
+</div>

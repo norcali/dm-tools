@@ -1,0 +1,2 @@
+class Constitution < Ability
+end
