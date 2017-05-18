@@ -1,169 +1,72 @@
 #boxy{
-  background: url( asset-path('alternative.png') ) no-repeat;
-  background-size: 100% 100%;
-  height: 1024px;
-  width: 791px;
 
-  .character-name{
-    position: absolute;
-    top: 60px;
-    left: 60px;
-  }
+    background: url( asset-path('alternative.png') ) no-repeat;
+    background-size: 100% 100%;
+    height: 3072px;
+    width: 2373px;
 
-  .first-row{
-   	position: absolute;
-    top: 24px;
-  }
+    h1{font-size: 55px; text-align:center;}
+    h2{font-size: 42px; text-align:center;}
+    h3{font-size: 32px;}
 
-  .second-row{
- 		position: absolute;
-    top: 41px;
- 	}
-
- 	.first {
-    left: 336px;
- 	}
-
- 	.second {
-    right: 249px;
- 	}
-
- 	.third{
- 		right: 100px;
- 	}
-
- 	.player-name{
- 		right: 125px;
- 	}
-
- 	.first-column{
- 		position: absolute;
-        left: 31px;
- 	}
-
-    .second-column{
+    .character-name{
         position: absolute;
-        left: 152px;
+        top: 180px;
+        left: 180px;
+        width: 700px;
     }
 
- 	.proficiency-bonus{
- 		top: 160px;
- 	}
-
- 	.attributes{
- 		position: absolute;
- 		left: -5px;
- 	}
-
- 	.strength{
- 		position: absolute;
-        top: 224px;
- 	}
-
- 	.dexterity{
- 		position: absolute;
-        top: 315px;
- 	}
-
- 	.constitution{
- 		position: absolute;
-        top: 407px;
-
- 	}
-
- 	.intelligence{
- 		position: absolute;
-        top: 498px;
- 	}
-
- 	.wisdom{
- 		position: absolute;
-        top: 590px;
- 	}
-
- 	.charisma{
- 		position: absolute;
-        top: 682px;
- 	}
-
- 	.score{
- 		position: absolute;
- 		left: 6px;
-        top: 16px;
- 	}
-
- 	.bonus {
- 		position: absolute;
- 		left: -5px;
-        top: 30px;
- 	}
-
- 	.skill-column{
- 		position: absolute;
- 		left: 83px;
- 	}
-
-
-    .saving-throw{
-        top:14px;
+    .first-row{
+       	position: absolute;
+        top: 140px;
     }
 
-    .first-skill {
-        top:27px;
+    .first {
+        left: 25px;
     }
 
-    .second-skill {
-        top: 40px;
+    .center-align{
+        text-align: center;
     }
 
-    .third-skill{
-        top: 53px;
+    .second-row{
+ 		position: absolute;
+        top: 245px;
+ 	}
+
+    .column{
+        top:490px;
     }
 
-    .fourth-skill{
-        top: 66px;
+    .bulto{
+        height:150px;
     }
 
-    .fifth-skill{
-        top: 79px;
-    }
+    .attributes{
+        height:270px;
 
-
-    .passive-perception{
-        top: 785px;
-    }
-
-    .languages{
-        top: 850px;
-        left: 2px;
-        width: 200px;
-        h5{
-            margin: 0px;
+        .score{
+            margin-top: -2%;
+            margin-left:15%;
         }
 
-    }
+        .bonus{
+            margin-left: 10%;
 
-    .tools{
-        top: 930px;
-        left: 2px;
-        width: 200px;
-        h5{
-            margin: 0px;
+            h1{
+                font-size:80px;
+            }
+
         }
-    }
 
-    .combat-stats{
-        top: 157px;
-        h3{
-            font-size: 30px;
+        .skill-column{
+            h3{
+                margin: 0px;
+            }
         }
-    }
 
-    .initiative{
-        left: 223px;
-    }
-
-    .speed{
-        left: 303px;
+        .saving-throw{
+            padding-top: 2%;
+        }
     }
 }

@@ -1,4 +1,3 @@
 class CharactersController < ApplicationController
-	def show
-	end
+	layout "sheet"
 end
