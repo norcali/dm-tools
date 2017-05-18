@@ -1,0 +1,169 @@
+#boxy{
+  background: url( asset-path('alternative.png') ) no-repeat;
+  background-size: 100% 100%;
+  height: 1024px;
+  width: 791px;
+
+  .character-name{
+    position: absolute;
+    top: 60px;
+    left: 60px;
+  }
+
+  .first-row{
+   	position: absolute;
+    top: 24px;
+  }
+
+  .second-row{
+ 		position: absolute;
+    top: 41px;
+ 	}
+
+ 	.first {
+    left: 336px;
+ 	}
+
+ 	.second {
+    right: 249px;
+ 	}
+
+ 	.third{
+ 		right: 100px;
+ 	}
+
+ 	.player-name{
+ 		right: 125px;
+ 	}
+
+ 	.first-column{
+ 		position: absolute;
+        left: 31px;
+ 	}
+
+    .second-column{
+        position: absolute;
+        left: 152px;
+    }
+
+ 	.proficiency-bonus{
+ 		top: 160px;
+ 	}
+
+ 	.attributes{
+ 		position: absolute;
+ 		left: -5px;
+ 	}
+
+ 	.strength{
+ 		position: absolute;
+        top: 224px;
+ 	}
+
+ 	.dexterity{
+ 		position: absolute;
+        top: 315px;
+ 	}
+
+ 	.constitution{
+ 		position: absolute;
+        top: 407px;
+
+ 	}
+
+ 	.intelligence{
+ 		position: absolute;
+        top: 498px;
+ 	}
+
+ 	.wisdom{
+ 		position: absolute;
+        top: 590px;
+ 	}
+
+ 	.charisma{
+ 		position: absolute;
+        top: 682px;
+ 	}
+
+ 	.score{
+ 		position: absolute;
+ 		left: 6px;
+        top: 16px;
+ 	}
+
+ 	.bonus {
+ 		position: absolute;
+ 		left: -5px;
+        top: 30px;
+ 	}
+
+ 	.skill-column{
+ 		position: absolute;
+ 		left: 83px;
+ 	}
+
+
+    .saving-throw{
+        top:14px;
+    }
+
+    .first-skill {
+        top:27px;
+    }
+
+    .second-skill {
+        top: 40px;
+    }
+
+    .third-skill{
+        top: 53px;
+    }
+
+    .fourth-skill{
+        top: 66px;
+    }
+
+    .fifth-skill{
+        top: 79px;
+    }
+
+
+    .passive-perception{
+        top: 785px;
+    }
+
+    .languages{
+        top: 850px;
+        left: 2px;
+        width: 200px;
+        h5{
+            margin: 0px;
+        }
+
+    }
+
+    .tools{
+        top: 930px;
+        left: 2px;
+        width: 200px;
+        h5{
+            margin: 0px;
+        }
+    }
+
+    .combat-stats{
+        top: 157px;
+        h3{
+            font-size: 30px;
+        }
+    }
+
+    .initiative{
+        left: 223px;
+    }
+
+    .speed{
+        left: 303px;
+    }
+}
