@@ -23,4 +23,8 @@ class Character < ApplicationRecord
 	def level_total
 		character_classes.map(&:level).sum()
 	end
+
+	def initiative
+		character_stat.initiative
+	end
 end

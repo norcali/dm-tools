@@ -25,4 +25,17 @@ class CharacterStat < ApplicationRecord
 
 		return st
 	end
+
+	def initiative
+		dex = abilities.where(ability_type: 'Dexterity').first.score
+		if dex >= 0
+			return "+#{dex.to_i}"
+		else
+			return "-#{dex.to_i}"
+		end
+	end
+
+	def skill_check(name)
+		skills.select{|f| f.name == name}
+	end
 end

@@ -1,0 +1,352 @@
+<div class="col-xs-12" id="melee">
+
+	<div class="col-xs-12 first-row row">
+
+		<div class="col-xs-5 character-name">
+			<h1><%= @character.name %></h1>
+		</div>
+
+		<div class="col-xs-7 basic-stats">
+			<div class="col-xs-5">&nbsp</div>
+			<div class="col-xs-7 player-name"><h2> Gamuza </h2></div>
+			<div class="col-xs-12 row">
+				<div class="col-xs-8">
+					<h2> <%= @character.klass_name %></h2>
+				</div>
+
+				<div class="col-xs-4 race">
+					<h2><%= @character.race.name %></h2>
+				</div>
+			</div>
+
+			<div class="col-xs-12 row">
+				<div class="col-xs-4 center-align background">
+					<h2><%= @character.background.name %></h2>
+				</div>
+
+				<div class="col-xs-4 center-align alignment">
+					<h2><%= @character.alignment %></h2>
+				</div>
+
+				<div class="col-xs-4 center-align experience">
+					<h2>9900/15000</h2>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-xs-12 second-row row">
+
+		<div class="col-xs-4">
+
+			<div class="col-xs-12 proficiency-bonus row-item">
+				<div class="col-xs-1">&nbsp</div>
+				<div class="col-xs-3">
+					<h1><%= @character.proficiency_bonus %></h1>
+				</div>
+				<div class="col-xs-8"></div>
+			</div>
+
+			<div class="col-xs-12 bulto"></div>
+
+			<div class="col-xs-12 passive-perception row-item">
+				<div class="col-xs-5">
+					<div class="score">
+						<h1><%# @character.character_stat.skill_check("perception") %></h1>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-xs-4">
+			<div class="col-xs-6">
+				<div class="col-xs-12 bulto-chico"></div>
+				<div class="col-xs-7 hit-points row-item">
+					<h1><%= @character.hit_points %></h1>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="col-xs-6 bulto-chico">
+				</div>
+				<div class="col-xs-6">
+					<div class="col-xs-7">&nbsp</div>
+					<div class="col-xs-2 hit-die row-item">
+						<h2><%= @character.total_level %></h2>
+					</div>
+					<div class="col-xs-3"></div>
+					<div class="col-xs-12"></div>
+					<div class="col-xs-12 hit-die">
+						<h1><%= @character.hit_dices %></h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-4 column-3">
+			<div class="col-xs-12">
+				<div class="col-xs-4 armor-class">
+					<h1><%= @character.armor_class %></h1>
+				</div>
+				<div class="col-xs-4 initiative">
+					<h1><%= @character.initiative %></h1>
+				</div>
+				<div class="col-xs-4 speed">
+					<h1><%= @character.speed %></h1>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-xs-12 third-row row">
+
+		<div class="col-xs-2">
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 score strength">
+				<h2>15</h2>
+			</div>
+
+			<div class="col-xs-12 bonus">
+				<h1>+2</h1>
+			</div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 skills strength">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+2</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills strength">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+2</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills strength">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+2</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-2">
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 score dexterity">
+				<h2>12</h2>
+			</div>
+
+			<div class="col-xs-12 bonus">
+				<h1>+1</h1>
+			</div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 skills dexterity">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+1</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills dexterity">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+1</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills dexterity">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+1</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills dexterity">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+1</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-2">
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 score constitution">
+				<h2>20</h2>
+			</div>
+			<div class="col-xs-12 bonus">
+				<h1>+5</h1>
+			</div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 skills constitution">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+5</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-2">
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 score intelligence">
+				<h2>14</h2>
+			</div>
+			<div class="col-xs-12 bonus">
+				<h1>+2</h1>
+			</div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 skills intelligence">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+2</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills intelligence">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+8</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills intelligence">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+5</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills intelligence">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+2</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills intelligence">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+2</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills intelligence">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+5</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-2">
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 score wisdom">
+				<h2>20</h2>
+			</div>
+			<div class="col-xs-12 bonus">
+				<h1>+5</h1>
+			</div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 skills wisdom">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+8</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills wisdom">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+5</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills wisdom">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+8</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills wisdom">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+5</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills wisdom">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+5</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills wisdom">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+5</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-2">
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 score charisma">
+				<h2>17</h2>
+			</div>
+			<div class="col-xs-12 bonus">
+				<h1>+3</h1>
+			</div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 skills charisma">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+6</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills charisma">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+3</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills charisma">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+3</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills charisma">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+3</h3>
+				</div>
+			</div>
+			<div class="col-xs-12 skills charisma">
+				<div class="col-xs-2"></div>
+				<div class="col-xs-10">
+					<h3>+6</h3>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-xs-12 fourth-row row">
+		<div class="col-xs-3">
+			<div class="col-xs-12 bulto">
+			</div>
+		</div>
+
+		<div class="col-xs-4 languages features">
+			<div class="col-xs-12 bulto">
+				<h3>Common, Dwarvish, Orcish, Undercommon</h3>
+				<h3>Smith's Tools</h3>
+				<h3>Dwarvish Resilience, Stonecunning</h3>
+				<h3>
+			</div>
+		</div>
+
+		<div class="col-xs-5">
+			<div class="col-xs-12 bulto">
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -17,4 +17,35 @@ class PlayerCharacter < Character
 	def title
 		"#{name} #{character_classes.each{|f| f.display_name}}"
 	end
+
+	def klass_name
+		res = ''
+		character_classes.each do |k|
+			res += "#{k.klass.name} #{k.level} / "
+		end
+		return res[0..-3]
+	end
+
+	def proficiency_bonus
+		case total_level
+		when 1..4
+			"+2"
+		when 5..8
+			"+3"
+		when 9..12
+			"+4"
+		when 13..16
+			"+5"
+		when 17..20
+			"+6"
+		end
+	end
+
+	def hit_dices
+		res = ''
+		character_classes.each do |k|
+			res += "d#{k.klass.hit_die}/"
+		end
+		return res[0..-2]
+	end
 end
