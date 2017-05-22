@@ -12,7 +12,7 @@ class Ability < ApplicationRecord
 	end
 
 	def get_skills
-		st = ability_items.find_by_name('saving throw')
+		st = ability_items.where(name: 'saving throw').to_a
 		ability_items - st
 	end
 
@@ -25,10 +25,7 @@ class Ability < ApplicationRecord
 		calculate_bonus(skill)
 	end
 
-	def calculate_bonus(item)
-		res = score
-		res += character_stat.proficiency_bonus if item.proficiency
-		res += character_stat.proficiency_bonus if item.expertize
-		return res
+	def saving_throw
+		get_skill('saving throw')
 	end
 end
