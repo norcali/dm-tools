@@ -21,17 +21,17 @@ class CharacterStat < ApplicationRecord
 	end
 
 	def class_features
-		""
+		[]
 	end
 
 	def features
-		""
+		[]
 	end
 
 	def spell_dc
 		dc = []
-		character.character_classes.each do |cl|
-			if cl.klass.magic_type.include?("caster") || cl.klass.magic_type.include?("special")
+		unless character.no_magic?
+			character.character_classes.each do |cl|
 				dc << (8 + proficiency_bonus.to_i + get_ability(cl.klass.spell_ability).score).to_i
 			end
 		end
@@ -41,14 +41,33 @@ class CharacterStat < ApplicationRecord
 
 	def spell_attack_bonus
 		sp_attack = []
-		character.character_classes.each do |cl|
-			if cl.klass.magic_type.include?("caster") || cl.klass.magic_type.include?("special")
+		unless character.no_magic?
+			character.character_classes.each do |cl|
 				bonus = proficiency_bonus.to_i + get_ability(cl.klass.spell_ability).score
 				sp_attack << get_score_bonus(bonus)
 			end
 		end
 
 		sp_attack
+	end
+
+	def prepared_spells
+		unless character.no_magic?
+			spells = 0
+			character.character_classes.each do |cl|
+				spells += cl.prepared_spells
+			end
+
+			spells
+		end
+	end
+
+	def total_spell_level
+		character.character_classes.map{|cl| cl.total_spell_level}.sum
+	end
+
+	def spell_slots
+		spell_slots_by_level(total_spell_level)
 	end
 
 	def print_languages

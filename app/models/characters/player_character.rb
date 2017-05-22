@@ -20,6 +20,10 @@ class PlayerCharacter < Character
 		character_classes.any?{|c| c.is_half_caster?}
 	end
 
+	def no_magic?
+		!character_classes.any?{|c| c.is_half_caster? || c.is_caster? }
+	end
+
 	def title
 		"#{name} #{character_classes.each{|f| f.display_name}}"
 	end
