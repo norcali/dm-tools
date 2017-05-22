@@ -342,16 +342,29 @@
 
 		<div class="col-xs-4 languages features">
 			<div class="col-xs-12 bulto">
-				<h3>Common, Dwarvish, Orcish, Undercommon</h3>
-				<h3>Smith's Tools</h3>
-				<h3>Dwarvish Resilience, Stonecunning</h3>
+				<h3><%= @character.character_stat.print_languages %></h3>
+				<h3><%= @character.character_stat.print_tools %></h3>
+				<h3><%= @character.character_stat.class_features %></h3>
 				<h3>
 			</div>
 		</div>
 
 		<div class="col-xs-5">
 			<div class="col-xs-12 bulto">
+				<h3><% @character.character_stat.features %></h3>
 			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-12 fifth-row row">
+		<div class="col-xs-4">
+			<div class="col-xs-4 spells-prepared">
+				<h1> 13 </h1>
+			</div>
+			<%= render 'spell_stats' %>
+		</div>
+
+		<div class="col-xs-8">
 		</div>
 	</div>
 

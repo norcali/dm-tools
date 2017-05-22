@@ -1,6 +1,11 @@
 class PlayerCharacter < Character
+
 	def multiclassed?
 		character_classes.count > 1
+	end
+
+	def multi_spellcaster?
+		character_classes.all?{|c| c.is_caster? || c.is_half_caster?}
 	end
 
 	def total_level
@@ -12,6 +17,7 @@ class PlayerCharacter < Character
 	end
 
 	def is_half_caster?
+		character_classes.any?{|c| c.is_half_caster?}
 	end
 
 	def title

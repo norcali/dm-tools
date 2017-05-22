@@ -10,4 +10,7 @@ module SheetHelper
 			return "-#{score.to_i}"
 		end
 	end
+
+	def spell_dc(value)
+	end
 end

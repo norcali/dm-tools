@@ -322,6 +322,34 @@
         }
     }
 
+    .fifth-row{
+        height: 300px;
+        margin: 50px;
+
+        h1{
+            font-size: 110px;
+            font-weight: 900;
+            margin-top: 0%;
+        }
+
+        h2{
+            font-size: 72px;
+            font-weight: 900;
+            margin-top: 5%;
+        }
+
+        .spells-prepared{
+            margin-top: 8%;
+            margin-left: 4%;
+
+        }
+
+        .spell{
+            margin-top: 2%;
+            margin-left: -4%;
+        }
+    }
+
 
 }
 
