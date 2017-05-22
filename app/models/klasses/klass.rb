@@ -9,4 +9,10 @@ class Klass < ApplicationRecord
 	def title
 		klass_type.titleize
 	end
+
+	def magic_type
+	end
+
+	def spell_ability
+	end
 end

@@ -167,3 +167,362 @@
         left: 303px;
     }
 }
+
+#alternative{
+
+    background: url( asset-path('alternative.png') ) no-repeat;
+    background-size: 100% 100%;
+    height: 3072px;
+    width: 2373px;
+
+    h1{font-size: 55px; text-align:center;}
+    h2{font-size: 42px; text-align:center;}
+    h3{font-size: 32px;}
+
+    .character-name{
+        position: absolute;
+        top: 180px;
+        left: 180px;
+        width: 700px;
+    }
+
+    .first-row{
+       	position: absolute;
+        top: 140px;
+    }
+
+    .first {
+        left: 25px;
+    }
+
+    .center-align{
+        text-align: center;
+    }
+
+    .second-row{
+ 		position: absolute;
+        top: 245px;
+ 	}
+
+    .column{
+        top:490px;
+    }
+
+    .bulto{
+        height:150px;
+    }
+
+    .attributes{
+        height:274px;
+
+        .score{
+            margin-top: -2%;
+            margin-left:15%;
+        }
+
+        .bonus{
+            margin-left: 10%;
+
+            h1{
+                font-size:80px;
+            }
+
+        }
+
+        .skill-column{
+            h3{
+                margin: 0px;
+            }
+        }
+
+        .skills{
+            padding-top: 1%;
+            margin-top: 1px;
+        }
+
+        .saving-throw{
+            padding-top: 5%;
+        }
+
+        .items{
+            margin-left: 6%;
+            margin-top: 1%;
+
+            h3{
+                margin: 0px;
+            }
+        }
+    }
+
+    .passive-perception{
+        margin-top: -1%;
+        margin-left: -1%;
+    }
+
+    .column-2{
+        .bulto{
+            height:50px;
+        }
+
+        .bulto-grande{
+            height: 150px;
+        }
+
+        .stats{
+            h1{
+                font-size: 90px;
+            }
+
+            .armor-class{
+                h1{
+                    margin-top: 0%;
+                    margin-left: 10%;
+                }
+            }
+
+            .speed{
+                h1{
+                    margin-right: 10%;
+                }
+            }
+        }
+    }
+
+    .column-3{
+        .bulto{
+            height:500px;
+        }
+
+        .features{
+            padding: 1%;
+            padding-right: 7%;
+            h3{
+                text-decoration: underline;
+                font-weight: 900;
+                margin:0px;
+            }
+
+            h4{
+                font-size: 26px;
+                margin-left: 5%;
+            }
+        }
+    }
+
+}
+
+#melee{
+    background: url( asset-path('melee.png') ) no-repeat;
+    background-size: 100% 100%;
+    height: 3072px;
+    width: 2373px;
+
+    h1{font-size: 55px; text-align:center;}
+    h2{font-size: 42px; text-align:center;}
+    h3{font-size: 32px;}
+
+    .row{
+        height: 400px;
+    }
+
+    .third-row{
+        height: 600px;
+        width: 2238px;
+        margin: 0 35px;
+        padding-left:50px;
+    }
+
+    .fourth-row{
+        height: 650px;
+        width: 2238px;
+        margin: 0 50px;
+        padding-left:50px;
+    }
+
+    .player-name{
+        margin-top: -4%;
+    }
+
+    .character-name{
+        margin-top: 7.5%;
+    }
+
+    .basic-stats{
+        height:400px;
+
+        .row{
+            margin-top: 8.2%;
+            height: 0px;
+        }
+    }
+
+    .row-item{
+        margin-top: 2%;
+        padding-left: 0px;
+        h1{
+            font-size: 72px;
+        }
+
+        .score{
+            margin-top: -3%;
+        }
+    }
+
+    .bulto{
+        height:125px;
+    }
+
+    .bulto-chico{
+        height: 50px;
+    }
+
+    .hit-die{
+        padding: 0px;
+        h2{
+            padding-top:10px;
+        }
+    }
+
+    .column-3{
+        h1{
+            font-size: 90px;
+            margin-top: 22%;
+            margin-left: 8%;
+            font-weight: 900;
+        }
+
+        .speed{
+            h1{
+                margin-left: 20%;
+            }
+        }
+    }
+
+    .third-row{
+        .skills{
+            margin-top: -4px;
+            h3{
+                margin-top: 0px;
+                margin-left: 5px;
+                font-weight: 600;
+            }
+        }
+
+        .score{
+            h2{
+                font-size: 55px;
+                margin-top: 5px;
+            }
+        }
+
+        .bonus{
+            h1{
+                font-size: 90px;
+                font-weight: 900;
+                margin-top: -1%;
+            }
+        }
+
+        .strength{
+            h2{
+                margin-left: 40px;
+            }
+        }
+
+        .dexterity{
+            h2{
+                margin-left: 35px;
+            }
+            h3{
+                margin-top: -2px;
+                margin-left: -5px;
+                font-weight: 600;
+            }
+        }
+
+        .constitution{
+            h2{
+                margin-left: 25px;
+            }
+            h3{
+                margin-top: -2px;
+                margin-left: -5px;
+                font-weight: 600;
+            }
+        }
+
+        .intelligence{
+            h2{
+                margin-left: 15px;
+            }
+            h3{
+                margin-top: -2px;
+                margin-left: -5px;
+                font-weight: 600;
+            }
+        }
+
+        .wisdom{
+            h2{
+                margin-left: 10px;
+            }
+            h3{
+                margin-top: -3px;
+                margin-left: -15px;
+                font-weight: 600;
+            }
+        }
+
+        .charisma{
+            h2{
+                margin-left: 10px;
+            }
+            h3{
+                margin-top: -2px;
+                margin-left: -15px;
+                font-weight: 600;
+            }
+        }
+
+    }
+
+    .fourth-row{
+        .languages{
+            padding: 0 100px;
+        }
+    }
+
+    .fifth-row{
+        height: 300px;
+        margin: 50px;
+
+        h1{
+            font-size: 110px;
+            font-weight: 900;
+            margin-top: 0%;
+        }
+
+        h2{
+            font-size: 72px;
+            font-weight: 900;
+            margin-top: 5%;
+        }
+
+        .spells-prepared{
+            margin-top: 8%;
+            margin-left: 4%;
+
+        }
+
+        .spell{
+            margin-top: 2%;
+            margin-left: -4%;
+        }
+
+        .slot{
+            margin: 1.1%;
+        }
+    }
+
+
+}
