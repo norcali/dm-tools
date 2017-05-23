@@ -1,18 +1,19 @@
 development:
-  adapter: "mysql2"
-  username: "root"
+  adapter: "postgresql"
+  username: "postgres"
   password: "123456"
   host: "localhost"
   database: "dm-tools"
-  encoding: "utf8"
-  collation: "utf8_unicode_ci"
+  encoding: "unicode"
   pool: 50
+  port: 5432
 
 production:
-  adapter: "postgresql"
-  encoding: "unicode"
-  database: "dm-tools"
-  pool: 5
-  username: "root"
-  password: "123456"
-  host: "localhost"
+  adapter: postgresql
+  encoding: unicode
+  database: dc36dja8ltic9m
+  username: xolcsjobimccmb
+  password: 0af65caf3ecf58983c8d245aae5d44c3712281b85a49adb069cb84d7ffeaa22f
+  host: ec2-54-197-232-155.compute-1.amazonaws.com
+  port: 5432
+  pool: 50
