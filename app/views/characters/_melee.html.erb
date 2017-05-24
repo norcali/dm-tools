@@ -7,8 +7,8 @@
 		</div>
 
 		<div class="col-xs-7 basic-stats">
-			<div class="col-xs-5">&nbsp</div>
-			<div class="col-xs-7 player-name"><h2> Gamuza </h2></div>
+			<div class="col-xs-6">&nbsp</div>
+			<div class="col-xs-5 player-name"><h2> Gamuza </h2></div>
 			<div class="col-xs-12 row">
 				<div class="col-xs-8">
 					<h2> <%= @character.klass_name %></h2>
@@ -41,17 +41,16 @@
 		<div class="col-xs-4">
 
 			<div class="col-xs-12 proficiency-bonus row-item">
-				<div class="col-xs-1">&nbsp</div>
 				<div class="col-xs-3">
 					<h1><%= @character.proficiency_bonus %></h1>
 				</div>
 				<div class="col-xs-8"></div>
 			</div>
 
-			<div class="col-xs-12 bulto"></div>
+			<div class="col-xs-12 bulto-chico"></div>
 
 			<div class="col-xs-12 passive-perception row-item">
-				<div class="col-xs-5">
+				<div class="col-xs-3">
 					<div class="score">
 						<h1><%= @character.character_stat.passive_perception %></h1>
 					</div>
@@ -62,7 +61,7 @@
 
 		<div class="col-xs-4">
 			<div class="col-xs-6">
-				<div class="col-xs-12 bulto-chico"></div>
+				<div class="col-xs-12 bultito"></div>
 				<div class="col-xs-7 hit-points row-item">
 					<h1><%= @character.hit_points %></h1>
 				</div>
