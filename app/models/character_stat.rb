@@ -107,6 +107,6 @@ class CharacterStat < ApplicationRecord
 	end
 
 	def skill_check(name)
-		skills.select{|f| f.name == name}.first.score
+		skills.select{|f| f.name.downcase == name.downcase}.first.score
 	end
 end

@@ -38,6 +38,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rails_admin'
 gem 'rails_admin_material_theme', '~> 0.2.0'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 
 
 group :development, :test do
