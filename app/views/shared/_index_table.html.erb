@@ -1,17 +1,17 @@
 <tr>
-  <% object.attributes.except('id').each do |item| %>
-    <%= index_attribute_renderer(item, object) %>
-  <% end %>
+  <%% object.attributes.except('id').each do |item| %>
+    <td><%%= item.last %></td>
+  <%% end %>
   <td class='align-right'>
-    <% if model_has_show?(object.class.to_s.underscore) %>
-      <%= link_to send("#{object.class.to_s.underscore}_path", object) do %>
+    <%% if model_has_show?<%= (@klass.singularize.underscore) %>%>
+      <%%= link_to send("<%= @klass.singularize.underscore %>_path", object) do %>
         <i class="fa fa-eye distance" aria-hidden="true"></i>
-      <% end %>
-    <% end %>
-    <% if current_user.can?("manage_#{object.class.name.pluralize.underscore}") %>
-      <%= link_to send("edit_#{object.class.to_s.underscore}_path", object) do %>
+      <%% end %>
+    <%% end %>
+    <%% if current_user.can?("manage_<%= @klass %>") %>
+      <%%= link_to send("edit_<%= @klass.singularize.underscore %>_path", object) do %>
         <i class="fa fa-pencil distance" aria-hidden="true"></i>
-      <% end %>
-    <% end %>
+      <%% end %>
+    <%% end %>
   </td>
 </tr>

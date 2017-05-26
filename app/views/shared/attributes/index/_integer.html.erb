@@ -1,8 +1,8 @@
-<% if item.first.include?('_id') %>
- <%= render partial: "shared/attributes/index/id", locals:{object: object, item: item } %>
-<% elsif item.first == 'duration' %>
+<%% if item.first.include?('_id') %>
+ <%%= render partial: "shared/attributes/index/id", locals:{object: object, item: item } %>
+<%% elsif item.first == 'duration' %>
 	<%= render partial: "shared/attributes/index/duration", locals:{object: object, item: item} %>
-<% else %>
+<%% else %>
 	<td><%= item.last %></td>
-<% end %>
+<%% end %>
 

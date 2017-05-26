@@ -1,7 +1,6 @@
-<% object_class_name = object.class.name.underscore %>
-<h3><%= t("activerecord.models.#{object_class_name}.one") + " #{object.display}" %></h3>
+<h3><%%= t('activerecord.models.<%= @klass %>.one') %></h3>
 
-<% if object.attributes.length > 2 %>
+<% if <%= @object %>.attributes.length > 2 %>
   <table class="table table-striped table-condensed">
     <thead>
       <tr>
@@ -51,8 +50,8 @@
 <div class='col-xs-12 no-spaces'>
   <div class='col-xs-9 no-spaces'>
     <% new_subclass = "#{t('helpers.submit.create') }  " + t("activerecord.models.#{subclass}.one") %>
-    <%= link_to new_subclass, send("new_#{subclass}_path", "#{object_class_name}_id": object), class: 'btn btn-default' %>
-    <%= link_to t('helpers.submit.back'), send("#{object_class_name}s_path"), class: 'btn btn-primary' %>
+    <%= link_to new_subclass, send("new_#{subclass}_path", "<%= @klass %>_id": object), class: 'btn btn-default' %>
+    <%= link_to t('helpers.submit.back'), send("<%= @klass %>s_path"), class: 'btn btn-primary' %>
   </div>
 
   <div class='col-xs-3 align-paginate'>

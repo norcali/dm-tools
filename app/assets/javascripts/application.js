@@ -5,4 +5,5 @@
 //= require froala_editor.min
 //= require moment
 //= require moment/es
+//= require bootstrap-datetimepicker
 //= require_tree .

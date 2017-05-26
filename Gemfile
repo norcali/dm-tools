@@ -4,7 +4,6 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 # Use sqlite3 as the database for Active Record
@@ -28,6 +27,7 @@ gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 gem 'wysiwyg-rails'
 gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 gem 'font-awesome-rails', '~> 4.6.2.0'
 gem 'select2-rails', '~> 4.0.3'
 gem 'bootstrap-multiselect-rails', '~> 0.9.9'
@@ -40,6 +40,7 @@ gem 'rails_admin'
 gem 'rails_admin_material_theme', '~> 0.2.0'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem "will_paginate", "~> 3.1.0"
 
 
 group :development, :test do

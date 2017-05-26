@@ -25,10 +25,10 @@ module ViewHelper
   end
 
   def index_attribute_renderer(item, object)
-    if lookup_context.template_exists?("#{object.class.columns_hash[item.first].type}", "shared/attributes/index/", true)
-      render partial: "shared/attributes/index/#{object.class.columns_hash[item.first].type}", locals: {object: object, item: item}
+    if lookup_context.template_exists?("#{@object.class.columns_hash[item.first].type}", "shared/attributes/index/", true)
+      render partial: "shared/attributes/index/#{@object.class.columns_hash[item.first].type}", locals: {object: @object, item: @item}
     else
-      render html: "<td>#{item.last}</td>".html_safe
+      render html: "<td>#{@item.last}</td>".html_safe
     end
   end
 

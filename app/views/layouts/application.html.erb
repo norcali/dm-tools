@@ -2,38 +2,38 @@
 <html>
   <head>
     <title><%= t('app_name') %></title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= yield(:head) %>
+    <%%= csrf_meta_tags %>
+    <%%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%%= yield(:head) %>
   </head>
 
   <body class="main">
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <%# link_to t('app_name'), root_path, class: 'navbar-brand' %>
+          <%%= link_to t('app_name'), root_path, class: 'navbar-brand' %>
         </div>
-        <%# render 'shared/navbar' %>
+        <%%= render 'shared/navbar' %>
       </div>
     </div>
 
     <div class="container">
-      <% flash.each do |key, value| %>
+      <%% flash.each do |key, value| %>
         <div class="<%= flash_class(key) %>">
-          <% if flash[:error] && key == 'error' %>
-            <% value.each do |error| %>
-              <p><%= error %></p>
-            <% end %>
-          <% else %>
-            <p><%= value %></p>
-          <% end %>
+          <%% if flash[:error] && key == 'error' %>
+            <%% value.each do |error| %>
+              <p><%%= error %></p>
+            <%% end %>
+          <%% else %>
+            <p><%%= value %></p>
+          <%% end %>
         </div>
-      <% end %>
+      <%% end %>
 
-      <%= yield %>
+      <%%= yield %>
     </div>
   </body>
 
-  <%= yield(:foot_js) %>
+  <%%= yield(:foot_js) %>
 </html>
