@@ -6,4 +6,10 @@ class CharactersController < ApplicationController
 		@sheet = params[:sheet]
 		@sheet ||= "melee"
 	end
+
+	def pdf
+		character = Character.find(params[:id])
+		character.generate_pdf
+		redirect_to "/downloads/character_#{character.id}.pdf"
+	end
 end

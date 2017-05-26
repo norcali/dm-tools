@@ -1,4 +1,6 @@
 class Ability < ApplicationRecord
+	after_create :create_skills
+
 	has_many :ability_items
 	belongs_to :character_stat
 	self.inheritance_column = 'ability_type'
@@ -27,5 +29,13 @@ class Ability < ApplicationRecord
 
 	def saving_throw
 		get_skill('saving throw')
+	end
+
+	private
+
+	def create_skills
+		skills.each do |skill|
+			AbilityItem.create({name: skill, ability_id: self.id})
+		end
 	end
 end

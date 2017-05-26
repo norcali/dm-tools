@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Sense.create({name:'No Darkvision'})
-Sense.create({name:'Darkvision 60ft'})
+darkvision = Sense.create({name:'Darkvision 60ft'})
 Sense.create({name:'Darkvision 120ft'})
 Language.create({name:'Common'})
 Language.create({name:'Dwarvish'})
@@ -27,38 +27,38 @@ Race.create({
 							race_type: "Humanoid",
 							sense_id: 1
 						})
-Race.create({
+dwarf = Race.create({
 							name: "Dwarf",
 							size: "M",
 							race_type: "Humanoid",
-							sense_id: 2
+							sense_id: darkvision.id
 						})
 Race.create({
 							name: "Elf",
 							size: "M",
 							race_type: "Humanoid",
-							sense_id: 2
+							sense_id: darkvision.id
 						})
-Klass.create({
+klass_1 = Klass.create({
 							klass_type: "Cleric",
 							specialization: "Arcana Domain",
 							hit_die: 8,
 							saving_throw_proficiency_1: "Wisdom",
 							saving_throw_proficiency_2: "Charisma"
 							})
-Klass.create({
+klass_2 = Klass.create({
 							klass_type: "Paladin",
 							specialization: "",
 							hit_die: 10,
 							saving_throw_proficiency_1: "Wisdom",
 							saving_throw_proficiency_2: "Charisma"
 							})
-Background.create({
+background = Background.create({
 										name: "Diplomat",
 										skill_proficiency_1: "Persuasion",
 										skill_proficiency_2: "History"
 									})
-Character.create({
+char = Character.create({
 									character_type: "PlayerCharacter",
 									name: "Fredrik 'Moash' Kholin",
 									alignment: "LN",
@@ -66,24 +66,16 @@ Character.create({
 									armor_class: 21,
 									base_armor_class: 19,
 									hit_points: 63,
-									race_id: 2,
-									sense_id: 2,
-									background_id: 1
+									race_id: dwarf.id,
+									sense_id: darkvision.id,
+									background_id: background.id
 									})
-CharacterStat.create({character_id: 1})
+stat = CharacterStat.create({character_id: char.id})
 
 array = [['Strength', 15, 2], ['Dexterity', 12, 1], ['Constitution', 20, 5], ['Intelligence', 14, 2], ['Wisdom', 20, 5], ['Charisma', 17, 3]]
 array.each do |n|
-	Ability.create({ability_type: n[0], value: n[1], score: n[2], character_stat_id: 1})
+	Ability.create({ability_type: n[0], value: n[1], score: n[2], character_stat_id: stat.id})
 end
 
-CharacterClass.create({level: 3, klass_id: 1, character_id: 1})
-CharacterClass.create({level: 2, klass_id: 2, character_id: 1})
-
-array = [["saving throw", "athletics"], ["saving throw", "acrobatics", "sleight of hand", "stealth"], ["saving throw"], ["saving throw", "arcana", "history", "investigation", "nature", "religion"], ["saving throw", "animal handling", "insight", "medicine", "perception", "survival"], ["saving throw", "deception", "intimidation", "performance", "persuasion"]]
-
-array.each_with_index do |arr, i|
-	arr.each do |a|
-		AbilityItem.create({name: a, ability_id: i})
-	end
-end
+CharacterClass.create({level: 3, klass_id: klass_1.id, character_id: character.id})
+CharacterClass.create({level: 2, klass_id: klass_2.id, character_id: character.id})

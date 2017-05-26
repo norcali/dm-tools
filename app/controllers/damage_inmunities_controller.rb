@@ -1,2 +1,0 @@
-class DamageInmunitiesController < ApplicationController
-end
