@@ -1,6 +1,8 @@
 class AbilityItem < ApplicationRecord
 	belongs_to :ability
 
+	validate :uniqueness
+
 	def score
 		res = ability.score
 		res += ability.character_stat.proficiency_bonus.to_i if proficiency
@@ -10,5 +12,13 @@ class AbilityItem < ApplicationRecord
 
 	def bonus
 		get_score_bonus(score)
+	end
+
+	private
+
+	def uniqueness
+		if AbilityItem.select{|f| f.ability_id == ability_id && f.name == name}.empty?
+			errors.add(:name, "la skill existe")
+		end
 	end
 end

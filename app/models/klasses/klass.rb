@@ -2,6 +2,8 @@ class Klass < ApplicationRecord
 	has_many :character_classes
 	self.inheritance_column = 'klass_type'
 
+	validates_uniqueness_of :specialization
+
 	def name
 		klass_type.titleize
 	end

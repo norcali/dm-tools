@@ -22,15 +22,15 @@ html,body{
 
   .second-row{
  		position: absolute;
-    top: 41px;
+        top: 41px;
  	}
 
  	.first {
-    left: 336px;
+        left: 336px;
  	}
 
  	.second {
-    right: 249px;
+        right: 249px;
  	}
 
  	.third{
@@ -330,10 +330,14 @@ html,body{
         height: 200px;
     }
 
+    .second-row{
+        padding: 0px;
+    }
+
     .third-row{
-        height: 300px;
-        width: 100%;
-        margin: 0 15px;
+        height: 260px;
+        width: 98%;
+        margin: 0 10px;
         padding-left:25px;
     }
 
@@ -366,6 +370,7 @@ html,body{
 
     .row-item{
         margin-top: -4%;
+        margin-left: 10px;
 
         h1{
             font-size: 36px;
@@ -384,35 +389,56 @@ html,body{
         height: 50px;
     }
 
+    .bulto-chiquito{
+        height: 45px;
+    }
+
     .bultito{
         height: 25px;
     }
 
     .hit-die{
-        padding: 0px;
+
         h2{
-            padding-top:10px;
+            margin-top: 13px;
+        }
+
+        h1{
+            margin-left: -25px;
+            margin-top: 0px;
         }
     }
 
+    .hit-points{
+        margin-top: -15px;
+        margin-left: -10px;
+    }
+
     .column-3{
+        padding: 0px;
+
         h1{
-            font-size: 36px;
+            font-size: 40px;
             margin-top: 22%;
-            margin-left: 8%;
+            margin-left: 37%;
             font-weight: 900;
         }
 
         .speed{
             h1{
-                margin-left: 20%;
+                margin-left: 50%;
             }
+        }
+
+        .armor-class{
+            padding-top: 2px;
         }
     }
 
     .third-row{
         .skills{
             margin-top: -4px;
+            padding: 0px;
             h3{
                 margin-top: 0px;
                 margin-left: 5px;
@@ -423,75 +449,53 @@ html,body{
         .score{
             h2{
                 font-size: 26px;
-                margin-top: 5px;
+                margin-top: 9px;
             }
         }
 
         .bonus{
             h1{
-                font-size: 36px;
+                font-size: 45px;
                 font-weight: 900;
-                margin-top: -1%;
-            }
-        }
-
-        .strength{
-            h2{
-                margin-left: 40px;
+                margin-top: -5px;
             }
         }
 
         .dexterity{
-            h2{
-                margin-left: 35px;
-            }
             h3{
                 margin-top: -2px;
-                margin-left: -5px;
                 font-weight: 600;
             }
         }
 
         .constitution{
-            h2{
-                margin-left: 25px;
-            }
             h3{
                 margin-top: -2px;
-                margin-left: -5px;
                 font-weight: 600;
             }
         }
 
         .intelligence{
-            h2{
-                margin-left: 15px;
-            }
+
             h3{
                 margin-top: -2px;
-                margin-left: -5px;
                 font-weight: 600;
             }
         }
 
         .wisdom{
-            h2{
-                margin-left: 10px;
-            }
+
             h3{
                 margin-top: -3px;
-                margin-left: -15px;
+                margin-left: -2px;
                 font-weight: 600;
             }
         }
 
         .charisma{
-            h2{
-                margin-left: 10px;
-            }
+
             h3{
                 margin-top: -2px;
-                margin-left: -15px;
                 font-weight: 600;
             }
         }
@@ -500,13 +504,27 @@ html,body{
 
     .fourth-row{
         .languages{
-            padding: 0 50px;
+            padding: 0px;
+
+            h3{
+                font-size: 15px;
+                padding-top: 4px;
+                margin-top: 0px;
+            }
         }
+
+        .features{
+            h3{
+                margin: 0px;
+                font-weight: 600;
+            }
+        }
+
     }
 
     .fifth-row{
         height: 150px;
-        margin: 25px;
+        margin-left: 0px;
 
         h1{
             font-size: 52px;
@@ -528,7 +546,7 @@ html,body{
 
         .spell{
             margin-top: 2%;
-            margin-left: -4%;
+            margin-left: -7%;
         }
 
         .slot{

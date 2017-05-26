@@ -1,4 +1,7 @@
 class PlayerCharacter < Character
+	after_create :set_languages
+
+	validates_uniqueness_of :name
 
 	def multiclassed?
 		character_classes.count > 1
@@ -57,5 +60,13 @@ class PlayerCharacter < Character
 			res += "d#{k.klass.hit_die}/"
 		end
 		return res[0..-2]
+	end
+
+
+	private
+
+	def set_languages
+		languages << race.languages
+		languages.uniq!
 	end
 end

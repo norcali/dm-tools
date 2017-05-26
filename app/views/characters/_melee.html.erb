@@ -8,7 +8,7 @@
 
 		<div class="col-xs-7 basic-stats">
 			<div class="col-xs-6">&nbsp</div>
-			<div class="col-xs-5 player-name"><h2> Gamuza </h2></div>
+			<div class="col-xs-5 player-name"><h2></h2></div>
 			<div class="col-xs-12 row">
 				<div class="col-xs-8">
 					<h2> <%= @character.klass_name %></h2>
@@ -29,7 +29,7 @@
 				</div>
 
 				<div class="col-xs-4 center-align experience">
-					<h2>9900/15000</h2>
+					<h2><%= %></h2>
 				</div>
 			</div>
 		</div>
@@ -60,22 +60,20 @@
 		</div>
 
 		<div class="col-xs-4">
-			<div class="col-xs-6">
+			<div class="col-xs-7">
 				<div class="col-xs-12 bultito"></div>
 				<div class="col-xs-7 hit-points row-item">
 					<h1><%= @character.hit_points %></h1>
 				</div>
 			</div>
-			<div class="col-xs-6">
+			<div class="col-xs-5">
 				<div class="col-xs-6 bulto-chico">
 				</div>
 				<div class="col-xs-6">
-					<div class="col-xs-7">&nbsp</div>
 					<div class="col-xs-2 hit-die row-item">
 						<h2><%= @character.total_level %></h2>
 					</div>
 					<div class="col-xs-3"></div>
-					<div class="col-xs-12"></div>
 					<div class="col-xs-12 hit-die">
 						<h1><%= @character.hit_dices %></h1>
 					</div>
@@ -102,7 +100,6 @@
 	<div class="col-xs-12 third-row row">
 
 		<div class="col-xs-2">
-			<div class="col-xs-12 bulto-chico"></div>
 			<div class="col-xs-12 score strength">
 				<% ability = @character.character_stat.get_ability('Strength') %>
 				<h2><%= ability.value %> </h2>
@@ -111,22 +108,18 @@
 			<div class="col-xs-12 bonus">
 				<h1><%= get_score_bonus(ability.score) %></h1>
 			</div>
-			<div class="col-xs-12 bulto-chico"></div>
-			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chiquito"></div>
 			<div class="col-xs-12 skills strength">
-				<div class="col-xs-2"></div>
 				<div class="col-xs-10 saving-throw">
 					<h3><%= ability.saving_throw.bonus %></h3>
 				</div>
 			</div>
 			<div class="col-xs-12 skills strength">
-				<div class="col-xs-2"></div>
 				<div class="col-xs-10">
 					<h3><%= ability.get_skill('athletics').bonus %></h3>
 				</div>
 			</div>
 			<div class="col-xs-12 skills strength">
-				<div class="col-xs-2"></div>
 				<div class="col-xs-10">
 					<h3><%= ability.get_skill('athletics').bonus %></h3>
 				</div>
@@ -134,7 +127,6 @@
 		</div>
 
 		<div class="col-xs-2">
-			<div class="col-xs-12 bulto-chico"></div>
 			<div class="col-xs-12 score dexterity">
 				<% ability = @character.character_stat.get_ability('Dexterity') %>
 				<h2><%= ability.value %> </h2>
@@ -143,8 +135,7 @@
 			<div class="col-xs-12 bonus">
 				<h1><%= get_score_bonus(ability.score) %></h1>
 			</div>
-			<div class="col-xs-12 bulto-chico"></div>
-			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chiquito"></div>
 			<div class="col-xs-12 skills dexterity">
 				<div class="col-xs-2"></div>
 				<div class="col-xs-10">
@@ -172,7 +163,6 @@
 		</div>
 
 		<div class="col-xs-2">
-			<div class="col-xs-12 bulto-chico"></div>
 			<div class="col-xs-12 score constitution">
 				<% ability = @character.character_stat.get_ability('constitution') %>
 				<h2><%= ability.value %> </h2>
@@ -180,8 +170,7 @@
 			<div class="col-xs-12 bonus">
 				<h1><%= get_score_bonus(ability.score) %></h1>
 			</div>
-			<div class="col-xs-12 bulto-chico"></div>
-			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chiquito"></div>
 			<div class="col-xs-12 skills constitution">
 				<div class="col-xs-2"></div>
 				<div class="col-xs-10">
@@ -191,7 +180,6 @@
 		</div>
 
 		<div class="col-xs-2">
-			<div class="col-xs-12 bulto-chico"></div>
 			<div class="col-xs-12 score intelligence">
 				<% ability = @character.character_stat.get_ability('intelligence') %>
 				<h2><%= ability.value %> </h2>
@@ -199,8 +187,7 @@
 			<div class="col-xs-12 bonus">
 				<h1><%= get_score_bonus(ability.score) %></h1>
 			</div>
-			<div class="col-xs-12 bulto-chico"></div>
-			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chiquito"></div>
 			<div class="col-xs-12 skills intelligence">
 				<div class="col-xs-2"></div>
 				<div class="col-xs-10">
@@ -240,7 +227,6 @@
 		</div>
 
 		<div class="col-xs-2">
-			<div class="col-xs-12 bulto-chico"></div>
 			<div class="col-xs-12 score wisdom">
 				<% ability = @character.character_stat.get_ability('wisdom') %>
 				<h2><%= ability.value %> </h2>
@@ -248,8 +234,7 @@
 			<div class="col-xs-12 bonus">
 				<h1><%= get_score_bonus(ability.score) %></h1>
 			</div>
-			<div class="col-xs-12 bulto-chico"></div>
-			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chiquito"></div>
 			<div class="col-xs-12 skills wisdom">
 				<div class="col-xs-2"></div>
 				<div class="col-xs-10">
@@ -289,7 +274,6 @@
 		</div>
 
 		<div class="col-xs-2">
-			<div class="col-xs-12 bulto-chico"></div>
 			<div class="col-xs-12 score charisma">
 				<% ability = @character.character_stat.get_ability('charisma') %>
 				<h2><%= ability.value %> </h2>
@@ -297,8 +281,7 @@
 			<div class="col-xs-12 bonus">
 				<h1><%= get_score_bonus(ability.score) %></h1>
 			</div>
-			<div class="col-xs-12 bulto-chico"></div>
-			<div class="col-xs-12 bulto-chico"></div>
+			<div class="col-xs-12 bulto-chiquito"></div>
 			<div class="col-xs-12 skills charisma">
 				<div class="col-xs-2"></div>
 				<div class="col-xs-10">
@@ -339,19 +322,25 @@
 			</div>
 		</div>
 
-		<div class="col-xs-4 languages features">
+		<div class="col-xs-3 languages">
 			<div class="col-xs-12 bulto">
-				<h3><%= @character.character_stat.print_languages %></h3>
-				<h3><%= @character.character_stat.print_tools %></h3>
-				<% @character.character_stat.class_features.each do |f| %>
-					<h3><%= f %></h3>
-				<% end %>
-				<h3>
+				<div class="col-xs-12 bultito"></div>
+				<div class="col-xs-12">
+					<h3><%= @character.character_stat.print_languages %></h3>
+				</div>
+				<div class="col-xs-12">
+					<h3><%= @character.character_stat.print_tools %></h3>
+				</div>
+				<div class="col-xs-12 features">
+					<% @character.character_stat.class_features.each do |f| %>
+						<h3><%= f %></h3>
+					<% end %>
+				</div>
 			</div>
 		</div>
 
-		<div class="col-xs-5">
-			<div class="col-xs-12 bulto">
+		<div class="col-xs-6">
+			<div class="col-xs-12 bulto features">
 				<% @character.character_stat.features.each do |f| %>
 					<h3><%= f %></h3>
 				<% end %>
