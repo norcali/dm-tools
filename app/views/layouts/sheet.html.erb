@@ -3,10 +3,12 @@
   <head>
     <title><%= "Character Sheet" %></title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'sheet.css', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield(:head) %>
   </head>
   <body>
   	<%= yield %>
   </body>
+  <%= yield(:foot_js) %>
 </html>

@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170517155310) do
   create_table "abilities", force: :cascade do |t|
     t.string  "ability_type"
     t.integer "value"
-    t.float   "score"
+    t.integer "score"
     t.integer "character_stat_id"
     t.index ["character_stat_id"], name: "index_abilities_on_character_stat_id"
   end

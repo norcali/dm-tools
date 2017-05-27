@@ -1,8 +1,3 @@
-html,body{
-    height:297mm;
-    width:210mm;
-}
-
 #boxy{
   background: url( asset-path('alternative.png') ) no-repeat;
   background-size: 100% 100%;
@@ -177,8 +172,6 @@ html,body{
 
     background: url( asset-path('alternative.png') ) no-repeat;
     background-size: 100% 100%;
-    height: 1122px;
-    width: 793px;
 
     h1{font-size: 55px; text-align:center;}
     h2{font-size: 42px; text-align:center;}

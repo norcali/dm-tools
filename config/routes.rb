@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :characters do
 	  get 'pdf', on: :member
+    get 'sheet', on: :member
 	end
 
   namespace :characters do

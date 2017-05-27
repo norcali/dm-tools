@@ -1,0 +1,344 @@
+es:
+  app_name: "5E DM TOOLS"
+  bool:
+    falseval: "No"
+    trueval: "Si"
+  confirm:
+    delete: "Está seguro que desea borrar este item?"
+  date:
+    formats:
+      default: ! '%d/%m/%Y'
+  tables:
+    no_records: "No se encontraron resultados."
+  helpers:
+    submit:
+      back: "Atrás"
+      cancel: "Cancelar"
+      create: "Crear"
+      delete: "Borrar"
+      edit: "Editar"
+      new: "Nuevo"
+      update: "Actualizar"
+  login_errors:
+    access_restricted: "No tiene privilegios para entrar a la página solicitada."
+    app_access_denied: "No tiene privilegios para entrar a la aplicación solicitada."
+    remote_access_denied: "No se puede acceder desde la ip actual."
+    out_of_working_time: "No se puede acceder fuera del horario laboral."
+    session_inexistent_or_expired: "La sesion actual no existe o ha caducado."
+    invalid_login: "El usuario o password son incorrectos."
+    unknown_error: "Error desconocido."
+    password_change_not_allowed: "No tiene permisos para cambiar la clave."
+    password_save_disabled: "No se puede usar la opción 'recordar contraseña' del navegador."
+  will_paginate:
+    previous_label: "&#8592;"
+    next_label: "&#8594;"
+    page_gap: "&hellip;"
+  time:
+    formats:
+      default: "%H:%M"
+      short: "%hh:%mm"
+      long: "%d-%m-%Y %H:%M:%S"
+  date:
+    abbr_day_names:
+    - DOM
+    - LUN
+    - MAR
+    - MIE
+    - JUE
+    - VIE
+    - SAB
+    abbr_month_names:
+    -
+    - ENE
+    - FEB
+    - MAR
+    - ABR
+    - MAY
+    - JUN
+    - JUL
+    - AGO
+    - SEP
+    - OCT
+    - NOV
+    - DIC
+    day_names:
+    - Domingo
+    - Lunes
+    - Martes
+    - Miércoles
+    - Jueves
+    - Viernes
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %b"
+    month_names:
+    -
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_years:
+        one: 1 año
+        other: "%{count} años"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minutos
+      month: Mes
+      second: Segundos
+      year: Año
+  activerecord:
+    errors:
+      format: "%{attribute} %{message}"
+      messages:
+        accepted: debe ser aceptado
+        blank: no puede estar en blanco
+        present: debe estar en blanco
+        confirmation: no coincide
+        empty: no puede estar vacío
+        equal_to: debe ser igual a %{count}
+        even: debe ser par
+        exclusion: está reservado
+        greater_than: debe ser mayor que %{count}
+        greater_than_or_equal_to: debe ser mayor que o igual a %{count}
+        inclusion: no está incluido en la lista
+        invalid: no es válido
+        invalid_format: formato no válido
+        less_than: debe ser menor que %{count}
+        less_than_or_equal_to: debe ser menor que o igual a %{count}
+        model_invalid: "La validación falló: %{errors}"
+        not_a_number: no es un número
+        not_an_integer: debe ser un entero
+        odd: debe ser impar
+        required: debe existir
+        taken: ya está en uso
+        too_long:
+          one: "es demasiado largo (1 carácter máximo)"
+          other: "es demasiado largo (%{count} caracteres máximo)"
+        too_short:
+          one: "es demasiado corto (1 carácter mínimo)"
+          other: "es demasiado corto (%{count} caracteres mínimo)"
+        wrong_length:
+          one: "no tiene la longitud correcta (1 carácter exactos)"
+          other: "no tiene la longitud correcta (%{count} caracteres exactos)"
+        other_than: debe ser distinto de %{count}
+      template:
+        body: 'Se encontraron problemas con los siguientes campos:'
+        header:
+          one: No se pudo guardar este/a %{model} porque se encontró 1 error
+          other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
+    helpers:
+      select:
+        prompt: Por favor seleccione
+      submit:
+        create: Crear %{model}
+        submit: Guardar %{model}
+        update: Actualizar %{model}
+
+
+    models:
+      character:
+        one: "Personaje"
+        other: "Personajes"
+
+    attributes:
+      project_area:
+        name: "Nombre"
+
+
+
+  admin:
+    js:
+      true: Cierto
+      false: Falso
+      is_present: Está presente
+      is_blank: Está en blanco
+      date: Fecha ...
+      between_and_: Entre ... y ...
+      today: Hoy
+      yesterday: Ayer
+      this_week: Esta semana
+      last_week: La semana pasada
+      number: "Número ..."
+      contains: Contiene
+      is_exactly: "Es exáctamente"
+      starts_with: Comienza con
+      ends_with: Termina con
+    loading: "Cargando..."
+    home:
+      name: Inicio
+    pagination:
+      previous: "&laquo; Anterior"
+      next: "Siguiente &raquo;"
+      truncate: "…"
+    misc:
+      filter_date_format: "dd/mm/yy" # a combination of 'dd', 'mm' and 'yy' with any delimiter. No other interpolation will be done!
+      search: "Buscar"
+      filter: "Filtrar"
+      refresh: "Actualizar"
+      show_all: "Mostrar todo"
+      add_filter: "Añadir filtro"
+      bulk_menu_title: "Elementos seleccionados"
+      remove: "Eliminar"
+      add_new: "Agregar nuevo"
+      chosen: "Elegido %{name}"
+      chose_all: "Elegir todos"
+      clear_all: "Borrar todos"
+      up: "Arriba"
+      down: "Abajo"
+      navigation: "Navegación"
+      navigation_static_label: "Enlaces"
+      log_out: "Salir"
+      ago: "atrás" #TODO: better something like "%{time} ago" -> "hace %{time}"
+    flash:
+      successful: "%{name} %{action} con éxito"
+      error: "%{name} no se %{action}"
+      internet_explorer: 'Este navegador no es soportado!'
+      noaction: "No se llevó a cabo ninguna acción"
+      model_not_found: "El modelo '%{model}' no se pudo encontrar"
+      object_not_found: "%{model} con id '%{id}' no se pudo encontrar"
+    table_headers:
+      model_name: "Nombre del modelo"
+      last_used: "Último uso"
+      records: "Registros"
+      username: "Usuario"
+      changes: "Cambios"
+      created_at: "Fecha/Hora"
+      item: "Elemento"
+      message: "Mensaje"
+    actions:
+      dashboard:
+        title: "Administración del sitio"
+        menu: "Panel de control"
+        breadcrumb: "Inicio"
+      index:
+        title: "Lista de %{model_label_plural}"
+        menu: "Listar"
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: "Detalles de %{model_label} '%{object_label}'"
+        menu: "Mostrar"
+        breadcrumb: "%{object_label}"
+      show_in_app:
+        menu: "Mostrar en la app"
+      new:
+        title: "Crear %{model_label}"
+        menu: "Agregar nuevo"
+        breadcrumb: "Nuevo"
+        link: "Agregar un nuevo %{model_label}"
+        done: "creado"
+      edit:
+        title: "Editar %{model_label} '%{object_label}'"
+        menu: "Editar"
+        breadcrumb: "Editar"
+        link: "Editar este %{model_label}"
+        done: "modificado"
+      delete:
+        title: "Eliminar %{model_label} '%{object_label}'"
+        menu: "Eliminar"
+        breadcrumb: "Eliminar"
+        link: "Eliminar '%{object_label}'"
+        done: "eliminado"
+      bulk_delete:
+        title: "Eliminar %{model_label_plural}"
+        menu: "Eliminar varios"
+        breadcrumb: "Eliminar varios"
+        bulk_link: "Eliminar %{model_label_plural} seleccionados"
+      export:
+        title: "Exportar %{model_label}"
+        menu: "Exportar"
+        breadcrumb: "Exportar"
+        link: "Exportar %{model_label_plural} encontrados"
+        bulk_link: "Exportar %{model_label_plural} seleccionados"
+        done: "exportados"
+      history_index:
+        title: "Historial para %{model_label_plural}"
+        menu: "Historial"
+        breadcrumb: "Historial"
+      history_show:
+        title: "Historial para %{model_label} '%{object_label}'"
+        menu: "Historial"
+        breadcrumb: "Historial"
+      cropper:
+        title: "Cortador"
+        menu: "Cortador"
+        breadcrumb: "Cortador"
+        preview: "Vista Previa"
+        crop: "Cortar"
+
+    form:
+      cancel: "Cancelar"
+      basic_info: "Información básica"
+      required: "Requerido"
+      optional: "Opcional"
+      one_char: "carácter"
+      char_length_up_to: "longitud de hasta"
+      char_length_of: "longitud de"
+      save: "Guardar"
+      save_and_add_another: "Guardar y añadir otro"
+      save_and_edit: "Guardar y editar"
+      all_of_the_following_related_items_will_be_deleted: "? Los siguientes elementos relacionados pueden ser eliminados o quedar huérfanos:"
+      are_you_sure_you_want_to_delete_the_object: "¿Está seguro de que quiere eliminar este %{model_name}"
+      confirmation: "Si, estoy seguro"
+      bulk_delete: "Los siguientes objetos serán eliminados, lo cual puede eliminar o dejar huérfanas algunas de sus dependencias relacionadas:"
+      new_model: "%{name} (nuevo)"
+    export:
+      confirmation: "Exportar a %{name}"
+      select: "Seleccione los campos para la exportación"
+      select_all_fields: "Seleccionar todos los campos"
+      fields_from: "Campos de %{name}"
+      fields_from_associated: "Campos del %{name} asociado"
+      display: "Mostrar %{name}: %{type}"
+      options_for: "Opciones para %{name}"
+      empty_value_for_associated_objects: "<vacío>"
+      click_to_reverse_selection: 'Haga click para invertir la selección'

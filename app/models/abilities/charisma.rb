@@ -1,6 +1,6 @@
 class Charisma < Ability
 
 	def skills
-		['saving_throw', 'deception', 'intimidation', 'performance', 'persuasion']
+		['saving throw', 'deception', 'intimidation', 'performance', 'persuasion']
 	end
 end

@@ -13,5 +13,12 @@ module DmTools
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.autoload_paths += Dir[ Rails.root.join('app', 'models', '**/') ]
+    config.active_record.raise_in_transactional_callbacks = true
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    config.i18n.available_locales = [:es, :en]
+    config.i18n.default_locale = :es
+    config.i18n.locale = :es
+    config.i18n.enforce_available_locales = true
+    config.time_zone = 'Buenos Aires'
   end
 end

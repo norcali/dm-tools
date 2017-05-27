@@ -63,7 +63,7 @@ class PlayerCharacter < Character
 	end
 
 	def generate_pdf
-		pdf = WickedPdf.new.pdf_from_url(Rails.application.routes.url_helpers.character_url(self.id, host: "https://character-sheets-5e.herokuapp.com/"))
+		pdf = WickedPdf.new.pdf_from_url(Rails.application.routes.url_helpers.sheet_character_url(self.id, host: "https://character-sheets-5e.herokuapp.com/"))
 		File.open("public/downloads/character_#{self.id}.pdf", 'wb') do |file|
 			file << pdf
 		end

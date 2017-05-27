@@ -1,12 +1,11 @@
 development:
-  adapter: "postgresql"
-  username: "postgres"
+  adapter: "sqlite3"
+  username: "root"
   password: "123456"
   host: "localhost"
   database: "dm-tools"
   encoding: "unicode"
   pool: 50
-  port: 5432
 
 production:
   adapter: postgresql

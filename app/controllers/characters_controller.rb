@@ -1,17 +1,19 @@
 class CharactersController < ApplicationController
-	before_action :set_character, only: [:show, :edit, :update, :destroy]
-	layout "sheet"
-
+	before_action :set_character, only: [:show, :edit, :update, :destroy, :pdf, :sheet]
+	
 	def show
-		@character = Character.find(params[:id])
-		@sheet = params[:sheet]
-		@sheet ||= "melee"
 	end
 
 	def pdf
-		character = Character.find(params[:id])
-		character.generate_pdf
+		@character.generate_pdf
 		redirect_to "/downloads/character_#{character.id}.pdf"
+	end
+
+	def sheet
+		@character = Character.find(params[:id])
+		@sheet = params[:sheet]
+		@sheet ||= "melee"
+		render 'sheet', layout: "sheet"
 	end
 
 	def new

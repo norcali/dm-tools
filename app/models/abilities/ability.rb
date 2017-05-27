@@ -31,6 +31,9 @@ class Ability < ApplicationRecord
 		get_skill('saving throw')
 	end
 
+	def skills
+	end
+
 	private
 
 	def create_skills

@@ -1,11 +1,10 @@
 /*
  *= require_tree .
  *= require_self
+ *= require ./bootstrap_and_overrides
  *= require ./custom_bootstrap
- *= require select2
  *= require select2-bootstrap
  *= require froala_editor.min.css
  *= require froala_style.min.css
  *= require bootstrap-datetimepicker
- *= require ./bootstrap_and_overrides
  */
