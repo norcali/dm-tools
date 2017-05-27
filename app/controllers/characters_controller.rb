@@ -18,7 +18,7 @@ class CharactersController < ApplicationController
 
 	def new
 		@character = Character.new
-		render_form(@character, params)
+		render 'form'
 	end
 
 

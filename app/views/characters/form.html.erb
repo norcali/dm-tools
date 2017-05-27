@@ -1,0 +1,20 @@
+<div class="col-md-12">
+	<h3><%= t("helpers.submit.#{@_controller.action_name}") + ' ' +  t("activerecord.models.character.one") %></h3>
+</div>
+
+<%= form_for @character, html: {role: :form} do |f| %>
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div>
+	
+	<div class="col-md-12">
+		<%= link_to t('helpers.submit.back'), root_path, class: 'btn btn-primary' %>
+	  <%= f.submit t("helpers.submit.#{@_controller.action_name}"), class: 'btn btn-info' %>
+
+	  <% unless @character.new_record? %>
+	    <%= link_to t('helpers.submit.delete'), character_path(@character), method: :delete, class: 'btn btn-danger', data: { confirm: t('confirm.delete') } %>
+	  <% end %>
+	</div>
+<% end %>
