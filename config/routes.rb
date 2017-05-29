@@ -7,9 +7,7 @@ Rails.application.routes.draw do
     get 'sheet', on: :member
 	end
 
-  namespace :characters do
-  	resources :abilities
-  	resources :character_stats
-  	resources :character_classes
-	end
+  resources :abilities
+  resources :character_stats
+  resources :character_classes
 end

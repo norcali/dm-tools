@@ -1,10 +1,10 @@
 class Character < ApplicationRecord
-	has_one :character_stat
+	has_one :character_stat, dependent: :destroy
 	belongs_to :race
 	belongs_to :sense
 	belongs_to :background
 	has_and_belongs_to_many :languages
-	has_many :character_classes
+	has_many :character_classes, dependent: :destroy
 	self.inheritance_column = 'character_type'
 
 

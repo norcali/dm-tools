@@ -1,6 +1,5 @@
 class Ability < ApplicationRecord
 	after_create :create_skills
-	before_save :calculate_scores
 
 	has_many :ability_items
 	belongs_to :character_stat

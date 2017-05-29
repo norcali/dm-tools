@@ -22,13 +22,12 @@ class CharactersController < ApplicationController
 	end
 
 	def create
-		@character = Character.new(character_params)
+		sense = {sense_id: Race.find(character_params[:race_id]).sense_id}
+		@character = Character.new(character_params.merge(sense))
 		if @character.save
-			@stat = CharacterStat.create(@character)
-			redirect_to sheet_path(@character)
+			@stat = CharacterStat.create(character_id: @character.id)
+			redirect_to edit_character_stat_path(@stat)
 		end
-
-		redirect_to root_path
 	end
 
 
