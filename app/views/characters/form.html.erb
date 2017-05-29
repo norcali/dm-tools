@@ -2,13 +2,56 @@
 	<h3><%= t("helpers.submit.#{@_controller.action_name}") + ' ' +  t("activerecord.models.character.one") %></h3>
 </div>
 
-<%= form_for @character, html: {role: :form} do |f| %>
+<%= simple_form_for(@character, html: {  }) do |f| %>
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	<%= f.hidden_field :character_type, value: "PlayerCharacter" %>
+
 	<div class="row">
 		<div class="col-md-12">
+			<div class="col-md-4 form-inputs">
+				<%= f.input :name %>
+			</div>
+			<div class="col-md-4 form-inputs">
+				<%= f.input :background_id, collection: Background.all %>
+			</div>
+			<div class="col-md-4 form-inputs">
+				<%= f.input :race_id, collection: Race.all %>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="col-md-4 form-inputs">
+				<%= f.input :alignment %>
+			</div>
+			<div class="col-md-4 form-inputs">
+				<%= f.input :speed %>
+			</div>
+			<div class="col-md-4 form-inputs">
+				<%= f.input :armor_class %>
+			</div>
+		</div>
+
+		<div class="col-md-12">
+			<div class="col-md-2">
+				<%= f.input :strength %>
+			</div>
+			<div class="col-md-2">
+				<%= f.input :dexterity %>
+			</div>
+			<div class="col-md-2">
+				<%= f.input :constitution %>
+			</div>
+			<div class="col-md-2">
+				<%= f.input :intelligence %>
+			</div>
+			<div class="col-md-2">
+				<%= f.input :wisdom %>
+			</div>
+			<div class="col-md-2">
+				<%= f.input :charisma %>
+			</div>
 		</div>
 	</div>
-	
+	<div class="col-md-12 bulto"></div>
 	<div class="col-md-12">
 		<%= link_to t('helpers.submit.back'), root_path, class: 'btn btn-primary' %>
 	  <%= f.submit t("helpers.submit.#{@_controller.action_name}"), class: 'btn btn-info' %>

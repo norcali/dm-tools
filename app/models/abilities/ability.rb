@@ -1,5 +1,6 @@
 class Ability < ApplicationRecord
 	after_create :create_skills
+	before_save :calculate_scores
 
 	has_many :ability_items
 	belongs_to :character_stat
@@ -35,6 +36,10 @@ class Ability < ApplicationRecord
 	end
 
 	private
+
+	def calculate_score
+		score = modifier(self.value)
+	end
 
 	def create_skills
 		skills.each do |skill|

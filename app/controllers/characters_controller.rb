@@ -1,6 +1,6 @@
 class CharactersController < ApplicationController
 	before_action :set_character, only: [:show, :edit, :update, :destroy, :pdf, :sheet]
-	
+
 	def show
 	end
 
@@ -19,6 +19,16 @@ class CharactersController < ApplicationController
 	def new
 		@character = Character.new
 		render 'form'
+	end
+
+	def create
+		@character = Character.new(character_params)
+		if @character.save
+			@stat = CharacterStat.create(@character)
+			redirect_to sheet_path(@character)
+		end
+
+		redirect_to root_path
 	end
 
 

@@ -192,8 +192,15 @@ es:
         other: "Personajes"
 
     attributes:
-      project_area:
-        name: "Nombre"
+      character:
+        name: "Nombre del Personaje"
+        alignment: "Alineamiento"
+        speed: "Movimiento"
+        armor_class: "Armor Class"
+        hit_points: "Hit Points"
+        race_id: "Raza"
+        sense_id: "Sentidos"
+        background_id: "Background"
 
 
 

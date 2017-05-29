@@ -25,11 +25,10 @@ gem 'jquery-rails'
 gem 'twitter-bootstrap-rails'
 gem 'wysiwyg-rails'
 gem 'momentjs-rails', '>= 2.9.0'
+gem "select2-rails", "~> 4.0.3"
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
-gem 'font-awesome-rails', '~> 4.6.2.0'
-gem 'select2-rails', '~> 4.0.3'
 gem 'bootstrap-multiselect-rails', '~> 0.9.9'
-gem 'font-awesome-sass', '~> 4.7.0'
+gem 'simple_form'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

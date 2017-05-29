@@ -5,7 +5,7 @@ class Klass < ApplicationRecord
 	validates_uniqueness_of :specialization
 
 	def name
-		klass_type.titleize
+		klass_type.titleize unless klass_type.nil?
 	end
 
 	def title

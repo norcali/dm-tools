@@ -1,4 +1,5 @@
 class CharacterStat < ApplicationRecord
+	attr_accessor :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma
 	has_many :abilities
 	belongs_to :character
 

@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20170517155310) do
 
   create_table "ability_items", force: :cascade do |t|
     t.string  "name"
-    t.boolean "proficiency"
-    t.boolean "expertize"
+    t.boolean "proficiency", default: false, null: false
+    t.boolean "expertize",   default: false, null: false
     t.integer "ability_id"
     t.index ["ability_id"], name: "index_ability_items_on_ability_id"
   end

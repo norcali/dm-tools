@@ -10,4 +10,8 @@ module SheetHelper
 			return "-#{score.to_i}"
 		end
 	end
+
+	def ability_names
+		['Strength','Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']
+	end
 end
