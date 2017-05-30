@@ -6,4 +6,8 @@ class Sorcerer < Klass
 	def spell_ability
 		"charisma"
 	end
+
+	def prepared_spells(score, level)
+		1 + level
+	end
 end

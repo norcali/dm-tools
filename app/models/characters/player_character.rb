@@ -8,7 +8,11 @@ class PlayerCharacter < Character
 	end
 
 	def multi_spellcaster?
-		character_classes.all?{|c| c.is_caster? || c.is_half_caster?}
+		if character_classes.count > 1
+			character_classes.all?{|c| c.is_caster? || c.is_half_caster?}
+		else
+			false
+		end
 	end
 
 	def total_level

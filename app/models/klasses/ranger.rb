@@ -6,4 +6,8 @@ class Ranger < Klass
 	def spell_ability
 		"wisdom"
 	end
+
+	def prepared_spells(score, level)
+		score + level.div(2)
+	end
 end

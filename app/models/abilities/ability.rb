@@ -1,7 +1,7 @@
 class Ability < ApplicationRecord
 	after_create :create_skills
 
-	has_many :ability_items
+	has_many :ability_items, dependent: :destroy
 	belongs_to :character_stat
 	self.inheritance_column = 'ability_type'
 

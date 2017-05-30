@@ -7,4 +7,8 @@ class Paladin < Klass
 	def spell_ability
 		"charisma"
 	end
+
+	def prepared_spells(score, level)
+		score + level.div(2)
+	end
 end

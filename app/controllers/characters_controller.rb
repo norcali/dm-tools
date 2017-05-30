@@ -6,7 +6,7 @@ class CharactersController < ApplicationController
 
 	def pdf
 		@character.generate_pdf
-		redirect_to "/downloads/character_#{character.id}.pdf"
+		redirect_to "/downloads/character_#{@character.id}.pdf"
 	end
 
 	def sheet
@@ -26,6 +26,10 @@ class CharactersController < ApplicationController
 		@character = Character.new(character_params.merge(sense))
 		if @character.save
 			@stat = CharacterStat.create(character_id: @character.id)
+			klass_1 = params[:character][:klass_1]
+			klass_2 = params[:character][:klass_2]
+			CharacterClass.create(level: klass_1[:level].to_i, character_id: @character.id, klass_id: klass_1[:klass_id] ) if klass_1
+			CharacterClass.create(level: klass_2[:level].to_i, character_id: @character.id, klass_id: klass_2[:klass_id] ) if klass_2
 			redirect_to edit_character_stat_path(@stat)
 		end
 	end
@@ -46,7 +50,9 @@ class CharactersController < ApplicationController
 																			:hit_points,
 																			:race_id,
 																			:sense_id,
-																			:background_id
+																			:background_id,
+																			:klass_1,
+																			:klass_2
 																			)
 	end
 end

@@ -1,2 +1,0 @@
-class SensesController < ApplicationController
-end

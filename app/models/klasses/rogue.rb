@@ -1,6 +1,6 @@
 class Rogue < Klass
 	def magic_type
-		if specialization.include?('arcane')
+		if specialization.include?('Arcane')
 			"half_caster"
 		else
 			"no_magic"
@@ -9,6 +9,10 @@ class Rogue < Klass
 
 	def spell_ability
 		"intelligence"
+	end
+
+	def prepared_spells(score, level)
+		level if specialization.include?('Arcane')
 	end
 
 end

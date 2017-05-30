@@ -9,33 +9,28 @@
 		<div class="col-md-12">
 			<div class="col-md-12">
 				<div class="col-md-2 form-inputs">
-					<%= f.input :strength %>
+					<%= f.input :strength, as: 'integer' %>
 				</div>
 				<div class="col-md-2 form-inputs">
-					<%= f.input :dexterity %>
+					<%= f.input :dexterity, as: 'integer' %>
 				</div>
 				<div class="col-md-2 form-inputs">
-					<%= f.input :constitution %>
+					<%= f.input :constitution, as: 'integer' %>
 				</div>
 				<div class="col-md-2 form-inputs">
-					<%= f.input :intelligence %>
+					<%= f.input :intelligence, as: 'integer' %>
 				</div>
 				<div class="col-md-2 form-inputs">
-					<%= f.input :wisdom %>
+					<%= f.input :wisdom, as: 'integer' %>
 				</div>
 				<div class="col-md-2 form-inputs">
-					<%= f.input :charisma %>
+					<%= f.input :charisma, as: 'integer' %>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="col-md-12 bulto"></div>
 	<div class="col-md-12">
-		<%= link_to t('helpers.submit.back'), root_path, class: 'btn btn-primary' %>
-	  <%= f.submit t("helpers.submit.#{@_controller.action_name}"), class: 'btn btn-info' %>
-
-	  <% unless @character_stat.new_record? %>
-	    <%= link_to t('helpers.submit.delete'), character_stat_path(@character_stat), method: :delete, class: 'btn btn-danger', data: { confirm: t('confirm.delete') } %>
-	  <% end %>
+	  <%= f.submit t("helpers.submit.new"), class: 'btn btn-info' %>
 	</div>
 <% end %>

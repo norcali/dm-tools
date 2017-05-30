@@ -1,6 +1,6 @@
 class CharacterStat < ApplicationRecord
 	attr_accessor :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma
-	has_many :abilities
+	has_many :abilities, dependent: :destroy
 	belongs_to :character
 
 	def name
@@ -56,7 +56,7 @@ class CharacterStat < ApplicationRecord
 		unless character.no_magic?
 			spells = 0
 			character.character_classes.each do |cl|
-				spells += cl.prepared_spells
+				spells += cl.klass.prepared_spells(get_ability((cl.klass.spell_ability)).score, cl.level)
 			end
 
 			spells

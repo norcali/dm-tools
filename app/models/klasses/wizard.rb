@@ -6,4 +6,8 @@ class Wizard < Klass
 	def spell_ability
 		"intelligence"
 	end
+
+	def prepared_spells(score, level)
+		score + level
+	end
 end

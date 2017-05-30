@@ -543,7 +543,18 @@
         }
 
         .slot{
-            margin: 1.1%;
+            margin: 1.5%;
+        }
+
+        .single {
+            .spell{
+                margin-top: 7%;
+                margin-left: -7%;
+            }
+
+            .spell-attack{
+                padding: 0px;
+            }
         }
     }
 

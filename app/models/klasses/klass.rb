@@ -17,4 +17,7 @@ class Klass < ApplicationRecord
 
 	def spell_ability
 	end
+
+	def prepared_spells(score, level)
+	end
 end

@@ -30,6 +30,30 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-md-12">
+		<%= f.fields_for :klass_1 do |ff| %>
+			<div class="col-md-6">
+				<div class="col-md-8">Class 1</div>
+				<div class="col-md-8">
+					<%= ff.input :level %>
+				</div>
+				<div class="col-md-8">
+					<%= ff.input :klass_id, collection: Klass.all %>
+				</div>
+			</div>
+		<% end %>
+		<%= f.fields_for :klass_2 do |ff| %>
+			<div class="col-md-6">
+				<div class="col-md-8">Class 2</div>
+				<div class="col-md-8">
+					<%= ff.input :level %>
+				</div>
+				<div class="col-md-8">
+					<%= ff.input :klass_id, collection: Klass.all %>
+				</div>
+			</div>
+		<% end %>
+	</div>
 	<div class="col-md-12 bulto"></div>
 	<div class="col-md-12">
 		<%= link_to t('helpers.submit.back'), root_path, class: 'btn btn-primary' %>
