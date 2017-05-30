@@ -1,7 +1,6 @@
 class AbilityItem < ApplicationRecord
 	belongs_to :ability
 	after_initialize :set_defaults, unless: :persisted?
-	validate :uniqueness
 
 	def score
 		res = ability.score
@@ -22,7 +21,7 @@ class AbilityItem < ApplicationRecord
 	end
 
 	def uniqueness
-		unless AbilityItem.select{|f| f.ability_id == ability_id && f.name == name}.empty?
+		unless AbilityItem.select{|f| f.ability_id == ability_id && f.name == name}.empty? && self.new_record?
 			errors.add(:name, "la skill existe")
 		end
 	end

@@ -1,0 +1,34 @@
+<div class="col-md-12">
+	<h3><%= t("helpers.submit.#{@_controller.action_name}")%></h3>
+</div>
+
+<%= simple_form_for(@character_stat,  url: done_character_stat_path, html: {  }) do |f| %>
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+	<div class="row">
+		<div class="col-md-12">
+			<% @character_stat.abilities.each do |ab| %>
+				<%= f.fields_for ab.ability_type do |ff| %>
+					<div class="col-md-2">
+						<h3><%= ab.ability_type %></h3>
+						<% ab.ability_items.each do |sk| %>
+							<%= ff.fields_for sk.name do |fff| %>
+								<h4><%= sk.name.titleize %></h4>
+								<div class="col-md-12">
+									<%= fff.input :proficiency, as: :boolean, checked_value: true, unchecked_value: false, input_html: { checked: sk.proficiency } %>
+								</div>
+								<div class="col-md-12">
+									<%= fff.input :expertize, as: :boolean, checked_value: true, unchecked_value: false, input_html: { checked: sk.expertize } %>
+								</div>
+							<% end %>
+						<% end %>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+	<div class="col-md-12 bulto"></div>
+	<div class="col-md-12">
+	  <%= f.submit t("helpers.submit.new"), class: 'btn btn-info' %>
+	</div>
+<% end %>

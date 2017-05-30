@@ -2,6 +2,7 @@ class CharacterStat < ApplicationRecord
 	attr_accessor :strength, :dexterity, :constitution, :intelligence, :wisdom, :charisma
 	has_many :abilities, dependent: :destroy
 	belongs_to :character
+	validate :ability_total
 
 	def name
 		unless try(:id).nil?
@@ -110,4 +111,29 @@ class CharacterStat < ApplicationRecord
 	def skill_check(name)
 		skills.select{|f| f.name.downcase == name.downcase}.first.score
 	end
+
+	private
+
+	def ability_total
+    return if abilities.blank?
+    errors.add("Too many abilities") if abilities.count > 6
+  end
+
+  def set_skill_proficiencies
+  	set_class_proficiencies && set_background_proficiencies
+  end
+
+  def set_class_proficiencies
+  	ability = abilities.where(ability_type: character.character_classes.first.klass.saving_throw_proficiency_1).first
+  	ability.saving_throw.update(proficiency: true)
+  	ability = abilities.where(ability_type: character.character_classes.first.klass.saving_throw_proficiency_2).first
+  	ability.saving_throw.update(proficiency: true)
+  end
+
+  def set_background_proficiencies
+  	skill = skills.select{|f| f.name.downcase == character.background.skill_proficiency_1.downcase}.first
+  	skill.update(proficiency: true)
+  	skill = skills.select{|f| f.name.downcase == character.background.skill_proficiency_2.downcase}.first
+  	skill.update(proficiency: true)
+  end
 end

@@ -1,9 +1,9 @@
 class Ability < ApplicationRecord
-	after_create :create_skills
-
 	has_many :ability_items, dependent: :destroy
 	belongs_to :character_stat
 	self.inheritance_column = 'ability_type'
+	after_create :create_skills
+	validates_associated :character_stat
 
 	def name
 		if try(:id).nil?

@@ -13,7 +13,7 @@ Language.create({name:'Abyssal'})
 Language.create({name:'Infernal'})
 Language.create({name:'Primordial'})
 Language.create({name:'Undercommon'})
-Race.create({
+human = Race.create({
 							name: "Human",
 							size: "M",
 							race_type: "Humanoid",
@@ -25,12 +25,24 @@ dwarf = Race.create({
 							race_type: "Humanoid",
 							sense_id: darkvision.id
 						})
-Race.create({
+elf = Race.create({
 							name: "Elf",
 							size: "M",
 							race_type: "Humanoid",
 							sense_id: darkvision.id
 						})
+
+human.languages = Language.find_by_name('Common')
+human.save
+
+dwarf.languages << Language.find_by_name('Common')
+dwarf.languages << Language.find_by_name('Dwarvish')
+dwarf.save
+
+elf.languages << Language.find_by_name('Common')
+elf.languages << Language.find_by_name('Elvish')
+elf.save
+
 klass_1 = Klass.create({
 							klass_type: "Cleric",
 							specialization: "Arcana Domain",

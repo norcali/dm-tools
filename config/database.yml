@@ -3,7 +3,7 @@ development:
   username: "root"
   password: "123456"
   host: "localhost"
-  database: "dm-tools"
+  database: "db/development.sqlite3"
   encoding: "unicode"
   pool: 50
 

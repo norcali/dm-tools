@@ -1,6 +1,5 @@
 class PlayerCharacter < Character
 	after_create :set_languages
-
 	validates_uniqueness_of :name
 
 	def multiclassed?
@@ -76,7 +75,8 @@ class PlayerCharacter < Character
 	private
 
 	def set_languages
-		languages << race.languages
-		languages.uniq!
+		self.languages << race.languages
+		self.languages.uniq
+		self.save
 	end
 end

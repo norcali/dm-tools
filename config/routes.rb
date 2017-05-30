@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     get 'sheet', on: :member
 	end
 
-  resources :abilities
-  resources :character_stats
-  resources :character_classes
+  resources :character_stats do
+  	get 'skills', on: :member
+  	patch 'done', on: :member
+  end
 end
