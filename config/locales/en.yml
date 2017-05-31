@@ -1,23 +1,245 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+es:
+  app_name: "5E DM TOOLS"
+  bool:
+    falseval: "No"
+    trueval: "Yes"
+  confirm:
+    delete: "are you sure you want to delete the item?"
+  date:
+    formats:
+      default: ! '%m/%d/%Y'
+  tables:
+    no_records: "Results not found."
+  helpers:
+    submit:
+      back: "Back"
+      cancel: "Cancel"
+      create: "Create"
+      delete: "Delete"
+      edit: "Edit"
+      new: "New"
+      update: "Update"
+  will_paginate:
+    previous_label: "&#8592;"
+    next_label: "&#8594;"
+    page_gap: "&hellip;"
+  time:
+    formats:
+      default: "%H:%M"
+      short: "%hh:%mm"
+      long: "%d-%m-%Y %H:%M:%S"
+  date:
+    abbr_day_names:
+    - SUN
+    - MON
+    - TUE
+    - WED
+    - THU
+    - FRI
+    - SAT
+    abbr_month_names:
+    -
+    - JAN
+    - FEB
+    - MAR
+    - APR
+    - MAY
+    - JUN
+    - JUL
+    - AUG
+    - SEP
+    - OCT
+    - NOV
+    - DEC
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %b"
+    month_names:
+    -
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :month
+    - :day
+    - :year
+  activerecord:
+    errors:
+      format: "%{attribute} %{message}"
 
-en:
-  hello: "Hello world"
+    helpers:
+      select:
+        prompt: Por favor seleccione
+      submit:
+        create: Crear %{model}
+        submit: Guardar %{model}
+        update: Actualizar %{model}
+
+
+    models:
+      character:
+        one: "Personaje"
+        other: "Personajes"
+      character_class:
+        one: "Class"
+        other: "Classes"
+
+    attributes:
+      character:
+        name: "Nombre del Personaje"
+        alignment: "Alineamiento"
+        speed: "Movimiento"
+        armor_class: "Armor Class"
+        hit_points: "Hit Points"
+        race_id: "Raza"
+        sense_id: "Sentidos"
+        background_id: "Background"
+
+
+
+  admin:
+    home:
+      name: Inicio
+    pagination:
+      previous: "&laquo; Anterior"
+      next: "Siguiente &raquo;"
+      truncate: "…"
+    misc:
+      filter_date_format: "dd/mm/yy" # a combination of 'dd', 'mm' and 'yy' with any delimiter. No other interpolation will be done!
+      search: "Buscar"
+      filter: "Filtrar"
+      refresh: "Actualizar"
+      show_all: "Mostrar todo"
+      add_filter: "Añadir filtro"
+      bulk_menu_title: "Elementos seleccionados"
+      remove: "Eliminar"
+      add_new: "Agregar nuevo"
+      chosen: "Elegido %{name}"
+      chose_all: "Elegir todos"
+      clear_all: "Borrar todos"
+      up: "Arriba"
+      down: "Abajo"
+      navigation: "Navegación"
+      navigation_static_label: "Enlaces"
+      log_out: "Salir"
+      ago: "atrás" #TODO: better something like "%{time} ago" -> "hace %{time}"
+    flash:
+      successful: "%{name} %{action} con éxito"
+      error: "%{name} no se %{action}"
+      internet_explorer: 'Este navegador no es soportado!'
+      noaction: "No se llevó a cabo ninguna acción"
+      model_not_found: "El modelo '%{model}' no se pudo encontrar"
+      object_not_found: "%{model} con id '%{id}' no se pudo encontrar"
+    table_headers:
+      model_name: "Nombre del modelo"
+      last_used: "Último uso"
+      records: "Registros"
+      username: "Usuario"
+      changes: "Cambios"
+      created_at: "Fecha/Hora"
+      item: "Elemento"
+      message: "Mensaje"
+    actions:
+      dashboard:
+        title: "Administración del sitio"
+        menu: "Panel de control"
+        breadcrumb: "Inicio"
+      index:
+        title: "Lista de %{model_label_plural}"
+        menu: "Listar"
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: "Detalles de %{model_label} '%{object_label}'"
+        menu: "Mostrar"
+        breadcrumb: "%{object_label}"
+      show_in_app:
+        menu: "Mostrar en la app"
+      new:
+        title: "Crear %{model_label}"
+        menu: "Agregar nuevo"
+        breadcrumb: "Nuevo"
+        link: "Agregar un nuevo %{model_label}"
+        done: "creado"
+      edit:
+        title: "Editar %{model_label} '%{object_label}'"
+        menu: "Editar"
+        breadcrumb: "Editar"
+        link: "Editar este %{model_label}"
+        done: "modificado"
+      delete:
+        title: "Eliminar %{model_label} '%{object_label}'"
+        menu: "Eliminar"
+        breadcrumb: "Eliminar"
+        link: "Eliminar '%{object_label}'"
+        done: "eliminado"
+      bulk_delete:
+        title: "Eliminar %{model_label_plural}"
+        menu: "Eliminar varios"
+        breadcrumb: "Eliminar varios"
+        bulk_link: "Eliminar %{model_label_plural} seleccionados"
+      export:
+        title: "Exportar %{model_label}"
+        menu: "Exportar"
+        breadcrumb: "Exportar"
+        link: "Exportar %{model_label_plural} encontrados"
+        bulk_link: "Exportar %{model_label_plural} seleccionados"
+        done: "exportados"
+      history_index:
+        title: "Historial para %{model_label_plural}"
+        menu: "Historial"
+        breadcrumb: "Historial"
+      history_show:
+        title: "Historial para %{model_label} '%{object_label}'"
+        menu: "Historial"
+        breadcrumb: "Historial"
+      cropper:
+        title: "Cortador"
+        menu: "Cortador"
+        breadcrumb: "Cortador"
+        preview: "Vista Previa"
+        crop: "Cortar"
+
+    form:
+      cancel: "Cancelar"
+      basic_info: "Información básica"
+      required: "Requerido"
+      optional: "Opcional"
+      one_char: "carácter"
+      char_length_up_to: "longitud de hasta"
+      char_length_of: "longitud de"
+      save: "Guardar"
+      save_and_add_another: "Guardar y añadir otro"
+      save_and_edit: "Guardar y editar"
+      all_of_the_following_related_items_will_be_deleted: "? Los siguientes elementos relacionados pueden ser eliminados o quedar huérfanos:"
+      are_you_sure_you_want_to_delete_the_object: "¿Está seguro de que quiere eliminar este %{model_name}"
+      confirmation: "Si, estoy seguro"
+      bulk_delete: "Los siguientes objetos serán eliminados, lo cual puede eliminar o dejar huérfanas algunas de sus dependencias relacionadas:"
+      new_model: "%{name} (nuevo)"
+    export:
+      confirmation: "Exportar a %{name}"
+      select: "Seleccione los campos para la exportación"
+      select_all_fields: "Seleccionar todos los campos"
+      fields_from: "Campos de %{name}"
+      fields_from_associated: "Campos del %{name} asociado"
+      display: "Mostrar %{name}: %{type}"
+      options_for: "Opciones para %{name}"
+      empty_value_for_associated_objects: "<vacío>"
+      click_to_reverse_selection: 'Haga click para invertir la selección'

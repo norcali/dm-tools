@@ -1,1 +1,97 @@
+<div class="row">
+	<div class="col-md-12 title">
+		<h2><%= @character.name %></h2>
+		<div class="col-md-12">
+			<% @character.character_classes.each do |cl| %>
+				<span class="btn btn-xs btn-success" %><%= cl.name %></span>
+			<% end %>
+		</div>
+		<div class="col-md-12">
+			<% @character.languages.each do |lang| %>
+				<span class="btn btn-xs btn-success"><%= lang.name %></span>
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="col-md-2"></div>
+		<div class="col-md-8 basic-info">
+			<h3><%= t('character.basic_info') %></h4>
+			<div class="col-md-3">
+				<h5><%= t('activerecord.attributes.character.race') %>:  <span class="btn btn-xs btn-success"><%= @character.race.name %></span></h5>
+			</div>
+			<div class="col-md-3">
+				<h5><%= t('activerecord.attributes.character.background') %>:
+				<span class="btn btn-xs btn-success"><%= @character.background.name %></span></h5>
+			</div>
+			<div class="col-md-3">
+				<h5><%= t('activerecord.attributes.character.alignment') %>:  <span class="btn btn-xs btn-success"><%= @character.alignment %></span></h5>
+			</div>
+			<div class="col-md-3">
+				<h5><%= t('activerecord.attributes.character.proficiency_bonus') %>:
+				<span class="btn btn-xs btn-success"><%= @character.proficiency_bonus %></span></h5>
+			</div>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+</div>
 
+<div class="row">
+ 	<div class="col-md-12 combat-info">
+ 		<h3><%= t('character.combat_info') %></h3>
+ 		<div class="col-md-2"></div>
+ 		<div class="col-md-8">
+ 			<div class="col-md-3">
+ 				<h5><%= t('activerecord.attributes.character.speed') %>:
+				<span class="btn btn-xs btn-success"><%= @character.speed %>ft</span></h5>
+ 			</div>
+ 			<div class="col-md-3">
+ 				<h5><%= t('activerecord.attributes.character.armor_class') %>:
+				<span class="btn btn-xs btn-success"><%= @character.armor_class %></span></h5>
+ 			</div>
+ 			<div class="col-md-3">
+ 				<h5><%= t('activerecord.attributes.character.hit_points') %>:
+				<span class="btn btn-xs btn-success"><%= @character.hit_points %></span></h5>
+ 			</div>
+ 			<div class="col-md-3">
+ 				<h5><%= t('activerecord.attributes.character.initiative') %>:
+				<span class="btn btn-xs btn-success"><%= @character.initiative %></span></h5>
+ 			</div>
+ 		</div>
+ 		<div class="col-md-2"></div>
+ 	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 abilities">
+		<% @character.character_stat.abilities.each do |ability| %>
+			<div class="col-xs-2">
+				<h3><%= ability.ability_type %></h3>
+				<div class="col-xs-12">
+					<h5><%= t('activerecord.attributes.ability.value') %>:
+					<span class="btn btn-xs btn-success"><%= ability.value %></span></h5>
+					<h5><%= t('activerecord.attributes.ability.score') %>:
+					<span class="btn btn-xs btn-success"><%= ability.score %></span></h5>
+				</div>
+				<% ability.ability_items.each do |item| %>
+					<div class="col-md-12">
+						<h5><%= item.name.titleize %>:
+						<span class="btn btn-xs btn-success"><%= item.bonus %></span></h5>
+					</div>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 languages">
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+	</div>
+</div>

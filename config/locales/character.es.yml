@@ -1,0 +1,9 @@
+es:
+  character:
+    sheet: "Hoja"
+    basic_info: "Informacion"
+    proficiency_bonus: "Proficiency Bonus"
+
+
+  words:
+    for: "de"
