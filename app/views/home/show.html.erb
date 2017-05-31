@@ -5,6 +5,8 @@
 	  	<% Character.all.each do |item| %>
 		  	<tr>
 		  		<td><%= link_to item.name, character_path(item), class: "btn btn-xs btn-success" %></td>
+		  		<td><%= link_to 'abilities', edit_character_stat_path(item.character_stat.id), class: "btn btn-xs btn-info" %></td>
+		  		<td><%= link_to 'proficiencies', skills_character_stat_path(item.character_stat.id), class: "btn btn-xs btn-info" %></td>
 		  		<td><%= link_to 'to pdf', pdf_character_path(item), class: "btn btn-xs btn-info" %></td>
 		  	</tr>
 		  <% end %>
